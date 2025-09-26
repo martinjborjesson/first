@@ -10,7 +10,7 @@ export const darkTheme: Theme = {
   primary: "#f47835",
   accent: "#8ec127",
   background: "#181818",
-  surface: "#212121",
+  surface: "#303030",
   text: "#faf3e0",
 };
 
