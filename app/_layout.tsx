@@ -1,10 +1,10 @@
-import UseTheme from "@/hooks/use-theme";
+import { useTheme } from "@/hooks/use-theme";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 
 export default function RootLayout() {
-  const theme = UseTheme();
+  const theme = useTheme();
 
   return (
     <ThemeProvider>

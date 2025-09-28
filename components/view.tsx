@@ -1,4 +1,4 @@
-import UseTheme from "@/hooks/use-theme";
+import { useTheme } from "@/hooks/use-theme";
 import { ComponentProps } from "react";
 import { View as ViewRN } from "react-native";
 
@@ -7,7 +7,7 @@ type Props = ComponentProps<typeof ViewRN> & {
 };
 
 export default function View({ style, children, surface, ...rest }: Props) {
-  const theme = UseTheme();
+  const theme = useTheme();
 
   return (
     <ViewRN {...rest} style={[{ backgroundColor: surface ? theme.surface : theme.background }, style]}>
