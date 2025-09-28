@@ -23,8 +23,8 @@ export const defaultLight: Theme = {
   isDarkMode: false,
   primary: "#f47835",
   accent: "#8ec127",
-  background: "#faf3e0",
-  surface: "#f9f7f1",
+  background: "#f9f7f1",
+  surface: "#faf3e0",
   text: "#181818",
 };
 
