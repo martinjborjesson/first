@@ -1,6 +1,3 @@
-import SafeAreaView from "@/components/safe-area-view";
-import Text from "@/components/text";
-import View from "@/components/view";
 import UseTheme from "@/hooks/use-theme";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Ionicons } from "@expo/vector-icons";
@@ -11,15 +8,11 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider>
-      <SafeAreaView edges={["top"]} style={{ flex: 0 }}>
-        <View>
-          <Text>Lägerplatser</Text>
-        </View>
-      </SafeAreaView>
       <Tabs screenOptions={{
         headerShown: false,
         tabBarActiveBackgroundColor: theme.surface,
         tabBarActiveTintColor: theme.primary,
+        tabBarInactiveTintColor: theme.text,
         tabBarStyle: { backgroundColor: theme.background },
       }}>
         <Tabs.Screen
@@ -46,6 +39,15 @@ export default function RootLayout() {
             title: "Places",
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="bonfire-outline" color={color} size={size} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="(tabs)/settings/index"
+          options={{
+            title: "Settings",
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="settings-outline" color={color} size={size} />
             ),
           }}
         />
