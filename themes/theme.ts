@@ -1,4 +1,5 @@
 export type Theme = {
+  name: string,
   primary: string,
   accent: string,
   background: string,
@@ -7,6 +8,7 @@ export type Theme = {
 };
 
 export const darkTheme: Theme = {
+  name: "Default Dark",
   primary: "#f47835",
   accent: "#8ec127",
   background: "#181818",
@@ -15,6 +17,7 @@ export const darkTheme: Theme = {
 };
 
 export const lightTheme: Theme = {
+  name: "Default Light",
   primary: "#f47835",
   accent: "#8ec127",
   background: "#faf3e0",
