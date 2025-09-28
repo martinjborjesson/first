@@ -1,5 +1,18 @@
 # Inlämning 1 - Martin Börjesson
 
+
+
+## Komponenter
+
+### React Native
+
+- `<View>`
+- `<ScrollView>`
+- `<SafeAreaView>`
+- `<Text>`
+- `<Pressable>`
+- `<Modal>`
+
 ### Krav för inlämningen
 
 - [ ] Projektet använder minst 4 stycken RN-komponenter och minst 4 stycken Expo komponenter.
