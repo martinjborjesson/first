@@ -1,12 +1,4 @@
-export type Theme = {
-  name: string,
-  isDarkMode: boolean,
-  primary: string,
-  accent: string,
-  background: string,
-  surface: string,
-  text: string,
-};
+import { Theme } from "@/types/types";
 
 export const defaultDark: Theme = {
   name: "Default Dark",
