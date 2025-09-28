@@ -1,5 +1,6 @@
 import SafeAreaView from "@/components/safe-area-view";
 import Text from "@/components/text";
+import ThemeButton from "@/components/theme-button";
 import View from "@/components/view";
 import { ScrollView, StyleSheet } from "react-native";
 
@@ -11,6 +12,7 @@ export default function PlacesScreen() {
           <Text style={s.bigText}>
             SETTINGS
           </Text>
+          <ThemeButton />
         </View>
       </ScrollView>
     </SafeAreaView>
