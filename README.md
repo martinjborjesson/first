@@ -9,6 +9,7 @@
 - `<View>`
 - `<ScrollView>`
 - `<SafeAreaView>`
+- `<Image>`
 - `<Text>`
 - `<Pressable>`
 - `<Modal>`
