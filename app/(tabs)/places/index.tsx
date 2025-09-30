@@ -20,7 +20,6 @@ export default function PlacesScreen() {
 const s = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
   },
   bigText: {

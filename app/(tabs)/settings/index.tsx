@@ -1,20 +1,20 @@
+import BackgroundImage from "@/components/background-image";
 import SafeAreaView from "@/components/replacements/safe-area-view";
 import Text from "@/components/replacements/text";
 import View from "@/components/replacements/view";
 import ThemeButton from "@/components/theme-button";
-import { ScrollView, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 
 export default function PlacesScreen() {
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <View style={s.container}>
-          <Text style={s.bigText}>
-            SETTINGS
-          </Text>
-          <ThemeButton />
-        </View>
-      </ScrollView>
+    <SafeAreaView style={{ flex: 1 }}>
+      <View style={s.container}>
+        <BackgroundImage />
+        <Text style={s.bigText}>
+          SETTINGS
+        </Text>
+        <ThemeButton />
+      </View>
     </SafeAreaView>
   );
 }
@@ -22,7 +22,6 @@ export default function PlacesScreen() {
 const s = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
   },
   bigText: {

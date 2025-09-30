@@ -1,3 +1,4 @@
+import BackgroundImage from "@/components/background-image";
 import SafeAreaView from "@/components/replacements/safe-area-view";
 import Text from "@/components/replacements/text";
 import View from "@/components/replacements/view";
@@ -11,6 +12,7 @@ export default function HomeScreen() {
   return (
     <SafeAreaView>
       <View style={s.container}>
+        <BackgroundImage />
         <View style={[s.container, { flex: 0 }]}>
           <View style={s.header}>
             <Ionicons name="bonfire-outline" color={theme.primary} size={50} />
@@ -34,12 +36,14 @@ const s = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "unset",
   },
   header: {
     flexDirection: "row",
     alignItems: "center",
     margin: 15,
     marginVertical: 40,
+    backgroundColor: "unset",
   },
   title: {
     fontSize: 30,
@@ -50,6 +54,7 @@ const s = StyleSheet.create({
   imageContainer: {
     gap: 2,
     margin: 15,
+    backgroundColor: "unset",
   },
   image: {
     width: 300,
