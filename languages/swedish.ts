@@ -12,5 +12,20 @@ export const swedish = {
   map: {},
   places: {},
   settings: {},
-  about: {},
+  about: {
+    title: "Om appen",
+    description: "Lägerplatser.se är en ideell app för friluftsliv. Här kan du upptäcka nya lägerplatser, betygsätta dina favoritplatser och dela med andra.",
+    featuresTitle: "Funktioner",
+    features: [
+      "Upptäck platser längs vandringsleder",
+      "Dela egna lägerplatser",
+      "Sätt betyg och skriv omdömen",
+    ],
+    disclaimerTitle: "Ansvarsfriskrivning",
+    disclaimer: "Informationen i appen tillhandahålls av användare. Vi kan inte garantera att den alltid är korrekt eller uppdaterad. Du använder appen på egen risk. Visa hänsyn till naturen och följ lokala regler. Informationen i appen tillhandahålls av användare. Vi kan inte garantera att den alltid är korrekt eller uppdaterad. Du använder appen på egen risk. Visa hänsyn till naturen och följ lokala regler.",
+    version: "Version",
+    contactTitle: "Kontakt",
+    contactEmail: "support@lagerplatser.se",
+    contactWebsite: "www.lagerplatser.se",
+  },
 }
