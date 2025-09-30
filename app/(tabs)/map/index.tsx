@@ -1,14 +1,36 @@
+import CurrentLocationButton from "@/components/current-location-button";
 import EasterEgg from "@/components/easter-egg";
 import View from "@/components/replacements/view";
 import { mockData } from "@/data";
 import { useTheme } from "@/hooks/use-theme";
 import { darkMapTheme } from "@/themes/dark-map-theme";
 import { Ionicons } from "@expo/vector-icons";
+import * as Location from "expo-location";
+import { useEffect, useRef, useState } from "react";
 import { StyleSheet } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 
 export default function MapScreen() {
   const theme = useTheme();
+  const mapRef = useRef<MapView>(null);
+  const [location, setLocation] = useState<Location.LocationObject | null>(null)
+
+  useEffect(() => {
+    async function getCurrentLocation() {
+
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        console.warn('Permission to access location was denied');
+        return;
+      }
+
+      let currentLocation = await Location.getCurrentPositionAsync({});
+      setLocation(currentLocation);
+    }
+
+    getCurrentLocation();
+  }, []);
+
   const markers = mockData.map(({ id, name, description, coordinates }) => ({
     id,
     name,
@@ -19,14 +41,17 @@ export default function MapScreen() {
   return (
     <View style={s.container}>
       <MapView
+        ref={mapRef}
         style={s.map}
         customMapStyle={theme.isDarkMode ? darkMapTheme : []}
         initialRegion={{
-          latitude: 59.6,
-          longitude: 14.4,
+          latitude: location?.coords.latitude ?? 59.6,
+          longitude: location?.coords.longitude ?? 14.4,
           latitudeDelta: 8.0,
           longitudeDelta: 2.0,
         }}
+        showsUserLocation={true}
+        showsMyLocationButton={false}
       >
         <EasterEgg />
         {markers.map((m) => {
@@ -48,6 +73,8 @@ export default function MapScreen() {
           );
         })}
       </MapView>
+
+      <CurrentLocationButton location={location} mapRef={mapRef} />
     </View>
   );
 }
@@ -67,5 +94,14 @@ const s = StyleSheet.create({
     borderRadius: 18,
     justifyContent: "center",
     alignItems: "center",
+  },
+  currentLocation: {
+    position: "absolute",
+    bottom: 20,
+    right: 20,
+    padding: 10,
+    borderWidth: 2,
+    borderRadius: 30,
+    elevation: 3,
   },
 })
