@@ -1,5 +1,6 @@
 import { useTheme } from "@/hooks/use-theme";
 import { Ionicons } from "@expo/vector-icons";
+import * as Haptics from "expo-haptics";
 import { Tabs } from "expo-router";
 import { StatusBar } from "react-native";
 
@@ -26,6 +27,9 @@ export default function TabsLayout() {
               <Ionicons name="home-outline" color={color} size={size} />
             ),
           }}
+          listeners={{
+            tabPress: () => Haptics.selectionAsync(),
+          }}
         />
         <Tabs.Screen
           name="map/index"
@@ -34,6 +38,9 @@ export default function TabsLayout() {
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="location-outline" color={color} size={size} />
             ),
+          }}
+          listeners={{
+            tabPress: () => Haptics.selectionAsync(),
           }}
         />
         <Tabs.Screen
@@ -44,6 +51,9 @@ export default function TabsLayout() {
               <Ionicons name="bonfire-outline" color={color} size={size} />
             ),
           }}
+          listeners={{
+            tabPress: () => Haptics.selectionAsync(),
+          }}
         />
         <Tabs.Screen
           name="settings/index"
@@ -53,6 +63,9 @@ export default function TabsLayout() {
               <Ionicons name="settings-outline" color={color} size={size} />
             ),
           }}
+          listeners={{
+            tabPress: () => Haptics.selectionAsync(),
+          }}
         />
         <Tabs.Screen
           name="about/index"
@@ -61,6 +74,9 @@ export default function TabsLayout() {
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="information-circle-outline" color={color} size={size} />
             ),
+          }}
+          listeners={{
+            tabPress: () => Haptics.selectionAsync(),
           }}
         />
       </Tabs>

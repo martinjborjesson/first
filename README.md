@@ -32,10 +32,12 @@ En app som låter användaren dela med sig och ta del av information om lägerpl
 ### Komponenter - Expo SDK
 
 - `NavigationBar`
+- `Haptics`
 
 ### Krav för väl godkänt:
 
 - [ ] Alla punkter för godkänt är uppfyllda
-- [ ] Ytterligare en valfri extern modul används i projektet (ex. react-hook-form).
+- [X] Ytterligare en valfri extern modul används i projektet (ex. react-hook-form).
+    - `React Native Maps`
 - [ ] Appen ska prata med ett Web-API för att hämta data.
 - [ ] Appen ska förberedas för lansering till en Appstore (Deadline samma dag som kursen slutar)
