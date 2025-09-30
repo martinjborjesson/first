@@ -2,22 +2,6 @@ import { CampingSite } from "@/types/types"
 
 export const mockData: CampingSite[] = [
   {
-    id: "patrik",
-    name: "Patrik Lax",
-    image: "@/assets/app/patrik.png",
-    description: "Kungen.",
-    coordinates: {
-      longitude: 57.714186790674404,
-      latitude: 12.796773591829576
-    },
-    firePlace: false,
-    fireWood: true,
-    shelter: true,
-    water: false,
-    drinkingWater: true,
-    note: "Hej",
-  },
-  {
     id: "0001",
     name: "Hålehall",
     image: "@/assets/app/front-page.jpg",
@@ -32,6 +16,7 @@ export const mockData: CampingSite[] = [
     water: true,
     drinkingWater: true,
     note: "På grund av vedstölder kan vi inte garantera att det finns ved vid våra lägerplatser. Om det är möjligt uppmanar vi till att ta med sig egen ved. Tänk på att ta väl hand om naturen!",
+    toilet: false,
   },
   {
     id: "0002",
@@ -48,6 +33,7 @@ export const mockData: CampingSite[] = [
     water: true,
     drinkingWater: false,
     note: "",
+    toilet: false,
   },
   {
     id: "0003",
@@ -64,6 +50,7 @@ export const mockData: CampingSite[] = [
     water: true,
     drinkingWater: true,
     note: "",
+    toilet: false,
   },
   {
     id: "0004",
@@ -80,6 +67,7 @@ export const mockData: CampingSite[] = [
     water: true,
     drinkingWater: true,
     note: "",
+    toilet: false,
   },
   {
     id: "0005",
@@ -96,9 +84,44 @@ export const mockData: CampingSite[] = [
     water: true,
     drinkingWater: false,
     note: "",
+    toilet: false,
+  },
+  {
+    id: "0006",
+    name: "Karlsro Rastplats",
+    image: "",
+    description: "Stor rastplats på asfalt och grus\nganska nära vägen med rastplatsmöbler",
+    coordinates: {
+      longitude: 12.265,
+      latitude: 58.365
+    },
+    firePlace: false,
+    fireWood: false,
+    shelter: false,
+    water: false,
+    drinkingWater: false,
+    note: "",
+    toilet: true,
+  },
+  {
+    id: "0007",
+    name: "Lägerplats 86 Hängesten",
+    image: "",
+    description: "Halvö i Östra Silen.",
+    coordinates: {
+      longitude: 12.279743856354196,
+      latitude: 59.192550999360385,
+    },
+    firePlace: true,
+    fireWood: true,
+    shelter: true,
+    water: true,
+    drinkingWater: false,
+    note: "Det finns ett hundratal lägerplatser inom sjösystemet Dalsland-Nordmarken. Den ideella föreningen DANO har investerat i dessa för att skydda vår ömtåliga natur och för att ge dig som besökare en så bra upplevelse som möjligt. Platserna är utvalda med hänsyn till växt- och djurlivet och i överenskommelse med markägaren. De flesta platserna har idag ett vindskydd, alla har en fast iordningsställd eldstad och ekologisk toalett. Ett flertal sopstationer är fördelade i systemet. Denna service finansieras genom försäljningen av Naturvårdskort. ",
+    toilet: true,
   },
   // {
-  //   id: "0002",
+  //   id: "0000",
   //   name: "",
   //   image: "",
   //   description: "",

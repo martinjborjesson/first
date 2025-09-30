@@ -14,12 +14,13 @@ export type CampingSite = {
   image?: string,
   description: string,
   coordinates: Coordinates,
-  firePlace: boolean,
-  fireWood: boolean,
-  shelter: boolean,
-  water: boolean,
-  drinkingWater: boolean,
+  firePlace?: boolean,
+  fireWood?: boolean,
+  shelter?: boolean,
+  water?: boolean,
+  drinkingWater?: boolean,
   note?: string,
+  toilet?: boolean,
 }
 
 export type Coordinates = {
