@@ -39,9 +39,10 @@ export default function MapScreen() {
               }}
               title={m.name}
               description={m.description}
+              zIndex={2}
             >
               <View style={[s.mapIcon, { backgroundColor: theme.surface, borderColor: theme.primary }]}>
-                <Ionicons name="bonfire-outline" size={28} color={theme.primary} />
+                <Ionicons name="bonfire" size={28} color={theme.primary} />
               </View>
             </Marker>
           );
