@@ -4,7 +4,7 @@ export const mockData: CampingSite[] = [
   {
     id: "0001",
     name: "Hålehall",
-    image: "@/assets/app/front-page.jpg",
+    image: "@/assets/app/shelter-images/0001.jpg",
     description: "Lägerplats med vindskydd på lövskogshöjd.",
     coordinates: {
       longitude: 12.845264,
@@ -21,8 +21,8 @@ export const mockData: CampingSite[] = [
   {
     id: "0002",
     name: "Bottnamaden",
-    image: "",
-    description: "Vindskydd med eldplats beläget vid Jälmån",
+    image: "@/assets/app/shelter-images/0002.jpg",
+    description: "Vindskydd med eldplats beläget vid Jälmån.",
     coordinates: {
       longitude: 13.5046,
       latitude: 57.5715,
@@ -32,14 +32,14 @@ export const mockData: CampingSite[] = [
     shelter: true,
     water: true,
     drinkingWater: false,
-    note: "",
+    // note: "",
     toilet: false,
   },
   {
     id: "0003",
     name: "Holmforsen",
-    image: "",
-    description: "Vindskydd med eldplats beläget vid Jälmån",
+    // image: "",
+    description: "Vindskydd med eldplats beläget vid Jälmån.",
     coordinates: {
       longitude: 13.5107,
       latitude: 57.5863
@@ -49,31 +49,31 @@ export const mockData: CampingSite[] = [
     shelter: true,
     water: true,
     drinkingWater: true,
-    note: "",
+    // note: "",
     toilet: false,
   },
   {
     id: "0004",
     name: "Abborrsjön",
-    image: "",
-    description: "Vindskydd med grillplats intill Abborrsjön",
+    image: "@/assets/app/shelter-images/0004.jpg",
+    description: "Vindskydd med grillplats intill Abborrsjön.",
     coordinates: {
       longitude: 12.6238,
       latitude: 57.7072
     },
     firePlace: true,
-    fireWood: true,
+    fireWood: false,
     shelter: true,
     water: true,
-    drinkingWater: true,
-    note: "",
+    drinkingWater: false,
+    // note: "",
     toilet: false,
   },
   {
     id: "0005",
     name: "Säven",
-    image: "",
-    description: "En sjö. Jäkligt fint på sommarn",
+    image: "@/assets/app/shelter-images/0005.jpg",
+    description: "En sjö. Jäkligt fint på sommarn.",
     coordinates: {
       longitude: 12.8693,
       latitude: 57.8845
@@ -83,14 +83,14 @@ export const mockData: CampingSite[] = [
     shelter: false,
     water: true,
     drinkingWater: false,
-    note: "",
+    note: "Vansinnigt mycket fästingar här. Garanterat någon i sälskapet kommer att få med sig några hem.",
     toilet: false,
   },
   {
     id: "0006",
     name: "Karlsro Rastplats",
     image: "",
-    description: "Stor rastplats på asfalt och grus\nganska nära vägen med rastplatsmöbler",
+    description: "Bra ställe för kaffepaus.",
     coordinates: {
       longitude: 12.265,
       latitude: 58.365
@@ -100,13 +100,13 @@ export const mockData: CampingSite[] = [
     shelter: false,
     water: false,
     drinkingWater: false,
-    note: "",
+    note: "Stor rastplats på asfalt och grus ganska nära vägen med rastplatsmöbler.",
     toilet: true,
   },
   {
     id: "0007",
     name: "Lägerplats 86 Hängesten",
-    image: "",
+    image: "@/assets/app/shelter-images/0007.jpg",
     description: "Halvö i Östra Silen.",
     coordinates: {
       longitude: 12.279743856354196,
