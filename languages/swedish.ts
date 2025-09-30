@@ -22,7 +22,7 @@ export const swedish = {
       "Sätt betyg och skriv omdömen",
     ],
     disclaimerTitle: "Ansvarsfriskrivning",
-    disclaimer: "Informationen i appen tillhandahålls av användare. Vi kan inte garantera att den alltid är korrekt eller uppdaterad. Du använder appen på egen risk. Visa hänsyn till naturen och följ lokala regler. Informationen i appen tillhandahålls av användare. Vi kan inte garantera att den alltid är korrekt eller uppdaterad. Du använder appen på egen risk. Visa hänsyn till naturen och följ lokala regler.",
+    disclaimer: "Informationen i appen tillhandahålls av användare. Vi kan inte garantera att den alltid är korrekt eller uppdaterad. Du använder appen på egen risk. Visa hänsyn till naturen och följ lokala regler.",
     version: "Version",
     contactTitle: "Kontakt",
     contactEmail: "support@lagerplatser.se",
