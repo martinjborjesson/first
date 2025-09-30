@@ -8,8 +8,8 @@ import { StyleSheet } from "react-native";
 export default function PlacesScreen() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
+      <BackgroundImage />
       <View style={s.container}>
-        <BackgroundImage />
         <Text style={s.bigText}>
           SETTINGS
         </Text>

@@ -13,8 +13,8 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView>
+      <BackgroundImage />
       <View style={s.container}>
-        <BackgroundImage />
         <View style={[s.container, { flex: 0 }]}>
           <View style={s.header}>
             <Ionicons name="bonfire-outline" color={theme.primary} size={50} />
