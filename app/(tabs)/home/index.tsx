@@ -3,11 +3,13 @@ import SafeAreaView from "@/components/replacements/safe-area-view";
 import Text from "@/components/replacements/text";
 import View from "@/components/replacements/view";
 import { useTheme } from "@/hooks/use-theme";
+import { languages } from "@/languages";
 import { Ionicons } from "@expo/vector-icons";
 import { Image, StyleSheet } from "react-native";
 
 export default function HomeScreen() {
   const theme = useTheme();
+  const language = languages.swedish;
 
   return (
     <SafeAreaView>
@@ -19,11 +21,11 @@ export default function HomeScreen() {
             <Text style={s.title}>Lägerplatser.se</Text>
           </View>
           <Text style={s.subTitle}>
-            Upptäck, dela och betygsätt lägerplatser i skogen.
+            {language.home.greeting}
           </Text>
         </View>
         <View style={s.imageContainer}>
-          <Image source={require("@/assets/app/front-page.jpg")} style={s.image} />
+          <Image source={require("@/assets/app/shelter-images/0001.jpg")} style={s.image} />
           <Text style={s.imageText}>Hålehall, skåneleden</Text>
         </View>
       </View>
@@ -36,14 +38,12 @@ const s = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "unset",
   },
   header: {
     flexDirection: "row",
     alignItems: "center",
     margin: 15,
     marginVertical: 40,
-    backgroundColor: "unset",
   },
   title: {
     fontSize: 30,
@@ -54,7 +54,6 @@ const s = StyleSheet.create({
   imageContainer: {
     gap: 2,
     margin: 15,
-    backgroundColor: "unset",
   },
   image: {
     width: 300,
