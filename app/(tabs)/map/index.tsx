@@ -1,5 +1,5 @@
 import EasterEgg from "@/components/easter-egg";
-import View from "@/components/view";
+import View from "@/components/replacements/view";
 import { mockData } from "@/data";
 import { useTheme } from "@/hooks/use-theme";
 import { darkMapTheme } from "@/themes/dark-map-theme";

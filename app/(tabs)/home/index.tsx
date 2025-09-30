@@ -1,6 +1,6 @@
-import SafeAreaView from "@/components/safe-area-view";
-import Text from "@/components/text";
-import View from "@/components/view";
+import SafeAreaView from "@/components/replacements/safe-area-view";
+import Text from "@/components/replacements/text";
+import View from "@/components/replacements/view";
 import { useTheme } from "@/hooks/use-theme";
 import { Ionicons } from "@expo/vector-icons";
 import { Image, ScrollView, StyleSheet } from "react-native";

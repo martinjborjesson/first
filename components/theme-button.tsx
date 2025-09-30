@@ -4,9 +4,9 @@ import { themesList } from "@/themes/theme";
 import { Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
 import { Modal, Pressable, ScrollView, StyleSheet } from "react-native";
-import SafeAreaView from "./safe-area-view";
-import Text from "./text";
-import View from "./view";
+import SafeAreaView from "./replacements/safe-area-view";
+import Text from "./replacements/text";
+import View from "./replacements/view";
 
 export default function ThemeButton() {
   const theme = useTheme();

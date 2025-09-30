@@ -1,7 +1,7 @@
-import SafeAreaView from "@/components/safe-area-view";
-import Text from "@/components/text";
+import SafeAreaView from "@/components/replacements/safe-area-view";
+import Text from "@/components/replacements/text";
+import View from "@/components/replacements/view";
 import ThemeButton from "@/components/theme-button";
-import View from "@/components/view";
 import { ScrollView, StyleSheet } from "react-native";
 
 export default function PlacesScreen() {
