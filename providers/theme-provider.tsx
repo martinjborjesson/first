@@ -1,4 +1,5 @@
-import { Theme, themesList } from "@/themes/theme";
+import { themesList } from "@/themes/theme";
+import { Theme } from "@/types/types";
 import React, { createContext, useEffect, useState } from "react";
 import { useColorScheme } from "react-native";
 
