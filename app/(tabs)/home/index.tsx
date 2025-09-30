@@ -3,30 +3,28 @@ import Text from "@/components/replacements/text";
 import View from "@/components/replacements/view";
 import { useTheme } from "@/hooks/use-theme";
 import { Ionicons } from "@expo/vector-icons";
-import { Image, ScrollView, StyleSheet } from "react-native";
+import { Image, StyleSheet } from "react-native";
 
 export default function HomeScreen() {
   const theme = useTheme();
 
   return (
     <SafeAreaView>
-      <ScrollView>
-        <View style={s.container}>
-          <View style={s.container}>
-            <View style={s.header}>
-              <Ionicons name="bonfire-outline" color={theme.primary} size={50} />
-              <Text style={s.title}>Lägerplatser.se</Text>
-            </View>
-            <Text style={s.subTitle}>
-              Upptäck, dela och betygsätt lägerplatser i skogen.
-            </Text>
+      <View style={s.container}>
+        <View style={[s.container, { flex: 0 }]}>
+          <View style={s.header}>
+            <Ionicons name="bonfire-outline" color={theme.primary} size={50} />
+            <Text style={s.title}>Lägerplatser.se</Text>
           </View>
-          <View style={s.imageContainer}>
-            <Image source={require("@/assets/app/front-page.jpg")} style={s.image} />
-            <Text style={s.imageText}>Hålehall, skåneleden</Text>
-          </View>
+          <Text style={s.subTitle}>
+            Upptäck, dela och betygsätt lägerplatser i skogen.
+          </Text>
         </View>
-      </ScrollView>
+        <View style={s.imageContainer}>
+          <Image source={require("@/assets/app/front-page.jpg")} style={s.image} />
+          <Text style={s.imageText}>Hålehall, skåneleden</Text>
+        </View>
+      </View>
     </SafeAreaView>
   );
 }
