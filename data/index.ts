@@ -120,6 +120,23 @@ export const mockData: CampingSite[] = [
     note: "Det finns ett hundratal lägerplatser inom sjösystemet Dalsland-Nordmarken. Den ideella föreningen DANO har investerat i dessa för att skydda vår ömtåliga natur och för att ge dig som besökare en så bra upplevelse som möjligt. Platserna är utvalda med hänsyn till växt- och djurlivet och i överenskommelse med markägaren. De flesta platserna har idag ett vindskydd, alla har en fast iordningsställd eldstad och ekologisk toalett. Ett flertal sopstationer är fördelade i systemet. Denna service finansieras genom försäljningen av Naturvårdskort. ",
     toilet: true,
   },
+  {
+    id: "0008",
+    name: "Fjällsjön",
+    image: "",
+    description: "Konstigt byggt vindskydd.",
+    coordinates: {
+      longitude: 12.918819312934955,
+      latitude: 57.76009295973071,
+    },
+    firePlace: true,
+    fireWood: false,
+    shelter: true,
+    water: true,
+    drinkingWater: false,
+    note: "Vindskydd byggt på höjd med vältrafikerad stig mellan eldstad och skydd.",
+    toilet: false,
+  },
   // {
   //   id: "0000",
   //   name: "",
@@ -135,5 +152,6 @@ export const mockData: CampingSite[] = [
   //   water: true,
   //   drinkingWater: true,
   //   note: "",
+  //   toilet: false,
   // },
 ]
