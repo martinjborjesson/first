@@ -11,7 +11,7 @@ export type Theme = {
 export type CampingSite = {
   id: string,
   name: string,
-  image: string,
+  image?: string,
   description: string,
   coordinates: Coordinates,
   firePlace: boolean,
@@ -19,10 +19,10 @@ export type CampingSite = {
   shelter: boolean,
   water: boolean,
   drinkingWater: boolean,
-  note: string,
+  note?: string,
 }
 
 export type Coordinates = {
-  longitude: string,
-  latitude: string,
+  longitude: number,
+  latitude: number,
 }
