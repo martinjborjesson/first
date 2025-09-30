@@ -33,6 +33,7 @@ En app som låter användaren dela med sig och ta del av information om lägerpl
 
 - `NavigationBar`
 - `Haptics`
+- `Location`
 
 ### Krav för väl godkänt:
 
