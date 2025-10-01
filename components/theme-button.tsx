@@ -4,7 +4,6 @@ import { themesList } from "@/themes/theme";
 import { Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
 import { Modal, Pressable, ScrollView, StyleSheet } from "react-native";
-import SafeAreaView from "./replacements/safe-area-view";
 import Text from "./replacements/text";
 import View from "./replacements/view";
 
@@ -17,14 +16,14 @@ export default function ThemeButton() {
   return (
     <>
       <Pressable
-        style={[s.button, { backgroundColor: theme.surface }]}
+        style={[s.button, { backgroundColor: theme.surface, borderColor: theme.primary }]}
         onPress={toggleTheme}
         onLongPress={() => setModalVisible(true)}
       >
-        <Text style={{ color: theme.text }}>Tema: {theme.name}</Text>
+        <Text style={{ color: theme.text }}>{theme.name}</Text>
       </Pressable>
 
-      <SafeAreaView>
+      <View>
         <Modal
           visible={modalVisible}
           transparent
@@ -61,7 +60,7 @@ export default function ThemeButton() {
             </View>
           </View>
         </Modal>
-      </SafeAreaView>
+      </View>
     </>
   );
 }
@@ -70,6 +69,7 @@ const s = StyleSheet.create({
   button: {
     padding: 5,
     borderRadius: 5,
+    borderWidth: 1,
   },
   modalOverlay: {
     flex: 1,
@@ -102,9 +102,6 @@ const s = StyleSheet.create({
     paddingVertical: 10,
     borderBottomWidth: 1,
     borderBottomColor: "#ddd",
-  },
-  themeIcon: {
-
   },
   back: {
     justifyContent: "center",
