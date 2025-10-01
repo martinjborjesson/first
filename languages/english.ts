@@ -1,4 +1,5 @@
 export const english = {
+  name: "English",
   tabs: {
     home: "Home",
     map: "Map",
@@ -23,6 +24,10 @@ export const english = {
   settings: {
     title: "Settings",
     theme: "Color scheme",
+    themeInstructions: "Tap to switch between light and dark color scheme, long press for more options.",
+    language: "Language",
+    chooseLanguage: "Choose language",
+    back: "Back",
   },
   about: {
     title: "About the app",

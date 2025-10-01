@@ -1,4 +1,5 @@
 export const swedish = {
+  name: "Svenska",
   tabs: {
     home: "Hem",
     map: "Karta",
@@ -23,6 +24,10 @@ export const swedish = {
   settings: {
     title: "Inställningar",
     theme: "Färgtema",
+    themeInstructions: "Tryck snabbt för att växla mellan ljust och mörkt färgtema, håll inne för att se fler alternativ.",
+    language: "Språk",
+    chooseLanguage: "Välj språk",
+    back: "Tillbaka",
   },
   about: {
     title: "Om appen",
