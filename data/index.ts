@@ -4,7 +4,7 @@ export const mockData: CampingSite[] = [
   {
     id: "0001",
     name: "Hålehall",
-    image: "@/assets/app/shelter-images/0001.jpg",
+    image: require("../assets/app/shelter-images/0001.jpg"),
     description: "Lägerplats med vindskydd på lövskogshöjd.",
     coordinates: {
       longitude: 12.845264,
@@ -21,7 +21,7 @@ export const mockData: CampingSite[] = [
   {
     id: "0002",
     name: "Bottnamaden",
-    image: "@/assets/app/shelter-images/0002.jpg",
+    image: require("../assets/app/shelter-images/0002.jpg"),
     description: "Vindskydd med eldplats beläget vid Jälmån.",
     coordinates: {
       longitude: 13.5046,
@@ -37,7 +37,6 @@ export const mockData: CampingSite[] = [
   {
     id: "0003",
     name: "Holmforsen",
-    image: "",
     description: "Vindskydd med eldplats beläget vid Jälmån.",
     coordinates: {
       longitude: 13.5107,
@@ -53,7 +52,7 @@ export const mockData: CampingSite[] = [
   {
     id: "0004",
     name: "Abborrsjön",
-    image: "@/assets/app/shelter-images/0004.jpg",
+    image: require("../assets/app/shelter-images/0004.jpg"),
     description: "Vindskydd med grillplats intill Abborrsjön.",
     coordinates: {
       longitude: 12.6238,
@@ -69,7 +68,7 @@ export const mockData: CampingSite[] = [
   {
     id: "0005",
     name: "Säven",
-    image: "@/assets/app/shelter-images/0005.jpg",
+    image: require("../assets/app/shelter-images/0005.jpg"),
     description: "En sjö. Jäkligt fint på sommarn.",
     coordinates: {
       longitude: 12.8693,
@@ -86,7 +85,6 @@ export const mockData: CampingSite[] = [
   {
     id: "0006",
     name: "Karlsro Rastplats",
-    image: "",
     description: "Bra ställe för kaffepaus.",
     coordinates: {
       longitude: 12.265,
@@ -103,7 +101,7 @@ export const mockData: CampingSite[] = [
   {
     id: "0007",
     name: "Lägerplats 86 Hängesten",
-    image: "@/assets/app/shelter-images/0007.jpg",
+    image: require("../assets/app/shelter-images/0007.jpg"),
     description: "Halvö i Östra Silen.",
     coordinates: {
       longitude: 12.279743856354196,
@@ -120,7 +118,6 @@ export const mockData: CampingSite[] = [
   {
     id: "0008",
     name: "Fjällsjön",
-    image: "",
     description: "Konstigt byggt vindskydd.",
     coordinates: {
       longitude: 12.918819312934955,
@@ -137,7 +134,7 @@ export const mockData: CampingSite[] = [
   // {
   //   id: "0000",
   //   name: "",
-  //   image: "",
+  //   image: require(""),
   //   description: "",
   //   coordinates: {
   //     longitude: 12.845264,
