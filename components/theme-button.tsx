@@ -42,7 +42,10 @@ export default function ThemeButton() {
                   .map((t) => (
                     <Pressable
                       key={t.name}
-                      onPress={() => setTheme(t)}
+                      onPress={() => {
+                        setTheme(t)
+                        setModalVisible(false);
+                      }}
                       style={s.themeButton}
                     >
                       {t.isDarkMode ? <Ionicons name="moon" color={theme.text} /> : <Ionicons name="sunny" color={theme.text} />}
