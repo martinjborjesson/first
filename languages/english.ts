@@ -10,8 +10,20 @@ export const english = {
     greeting: "Discover, share and rate camp sites.",
   },
   map: {},
-  places: {},
-  settings: {},
+  places: {
+    title: "Campsites",
+    fireplace: "Fireplace",
+    fireWood: "Firewood",
+    shelter: "Shelter",
+    water: "Swimming",
+    drinkingWater: "Drinkable water",
+    toilet: "Toilet",
+    press: "Tap for more details..."
+  },
+  settings: {
+    title: "Settings",
+    theme: "Color scheme",
+  },
   about: {
     title: "About the app",
     description: "Lägerplatser.se is a non-profit app for outdoor life. Here you can discover new campsites, rate your favorites, and share with others.",

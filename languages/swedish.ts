@@ -10,8 +10,20 @@ export const swedish = {
     greeting: "Upptäck, dela och betygsätt lägerplatser.",
   },
   map: {},
-  places: {},
-  settings: {},
+  places: {
+    title: "Lägerplatser",
+    fireplace: "Eldstad",
+    fireWood: "Ved",
+    shelter: "Vindskydd",
+    water: "Badmöjligheter",
+    drinkingWater: "Dricksvatten",
+    toilet: "Toalett",
+    press: "Tryck för mer information..."
+  },
+  settings: {
+    title: "Inställningar",
+    theme: "Färgtema",
+  },
   about: {
     title: "Om appen",
     description: "Lägerplatser.se är en ideell app för friluftsliv. Här kan du upptäcka nya lägerplatser, betygsätta dina favoritplatser och dela med andra.",

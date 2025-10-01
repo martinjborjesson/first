@@ -32,13 +32,12 @@ export const mockData: CampingSite[] = [
     shelter: true,
     water: true,
     drinkingWater: false,
-    // note: "",
     toilet: false,
   },
   {
     id: "0003",
     name: "Holmforsen",
-    // image: "",
+    image: "",
     description: "Vindskydd med eldplats beläget vid Jälmån.",
     coordinates: {
       longitude: 13.5107,
@@ -49,7 +48,6 @@ export const mockData: CampingSite[] = [
     shelter: true,
     water: true,
     drinkingWater: true,
-    // note: "",
     toilet: false,
   },
   {
@@ -66,7 +64,6 @@ export const mockData: CampingSite[] = [
     shelter: true,
     water: true,
     drinkingWater: false,
-    // note: "",
     toilet: false,
   },
   {
