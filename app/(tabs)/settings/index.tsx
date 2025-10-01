@@ -1,4 +1,5 @@
 import BackgroundImage from "@/components/background-image";
+import LanguageButton from "@/components/language-button";
 import SafeAreaView from "@/components/replacements/safe-area-view";
 import Text from "@/components/replacements/text";
 import View from "@/components/replacements/view";
@@ -27,6 +28,7 @@ export default function PlacesScreen() {
           <View style={s.setting}>
             <View style={s.settingsRow}>
               <Text>{language.settings.language + ":"}</Text>
+              <LanguageButton />
             </View>
           </View>
         </View>
@@ -56,9 +58,6 @@ const s = StyleSheet.create({
     marginBottom: 30,
     padding: 5,
     width: "100%",
-    // borderWidth: 1,
-    // borderColor: "#f00",
-    // elevation: 3,
   },
   settingsRow: {
     flexDirection: "row",
