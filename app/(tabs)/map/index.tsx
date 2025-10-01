@@ -65,9 +65,11 @@ export default function MapScreen() {
               title={m.name}
               description={m.description}
               zIndex={2}
+              style={{ maxWidth: 50 }}
             >
-              <View style={[s.mapIcon, { backgroundColor: theme.surface, borderColor: theme.primary }]}>
-                <Ionicons name="bonfire" size={28} color={theme.primary} />
+              <View style={[
+                s.mapIcon, { backgroundColor: theme.surface, borderColor: theme.primary }]}>
+                <Ionicons name="bonfire" size={25} color={theme.primary} />
               </View>
             </Marker>
           );
@@ -88,8 +90,8 @@ const s = StyleSheet.create({
     height: '100%',
   },
   mapIcon: {
-    height: 36,
-    width: 36,
+    height: "100%",
+    width: "100%",
     borderWidth: 2,
     borderRadius: 18,
     justifyContent: "center",
