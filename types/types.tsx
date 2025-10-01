@@ -1,3 +1,5 @@
+import { languages } from "@/languages";
+
 export type Theme = {
   name: string,
   isDarkMode: boolean,
@@ -27,3 +29,5 @@ export type Coordinates = {
   longitude: number,
   latitude: number,
 }
+
+export type Language = keyof typeof languages;

@@ -4,11 +4,11 @@ import Text from "@/components/replacements/text";
 import View from "@/components/replacements/view";
 import ShelterListItem from "@/components/shelter-list-item";
 import { mockData } from "@/data";
-import { languages } from "@/languages";
+import { useLanguage } from "@/hooks/use-language";
 import { ScrollView, StyleSheet } from "react-native";
 
 export default function PlacesScreen() {
-  const language = languages.swedish;
+  const language = useLanguage();
   const shelters = mockData;
 
   return (

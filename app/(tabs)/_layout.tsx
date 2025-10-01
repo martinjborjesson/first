@@ -1,5 +1,5 @@
+import { useLanguage } from "@/hooks/use-language";
 import { useTheme } from "@/hooks/use-theme";
-import { languages } from "@/languages";
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
 import { Tabs } from "expo-router";
@@ -7,7 +7,7 @@ import { StatusBar } from "react-native";
 
 export default function TabsLayout() {
   const theme = useTheme();
-  const language = languages.swedish;
+  const language = useLanguage();
 
   return (
     <>

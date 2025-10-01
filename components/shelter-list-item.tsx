@@ -1,5 +1,5 @@
+import { useLanguage } from "@/hooks/use-language";
 import { useTheme } from "@/hooks/use-theme";
-import { languages } from "@/languages";
 import { CampingSite } from "@/types/types";
 import { Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
@@ -14,13 +14,13 @@ type Props = {
 export default function ShelterListItem({ shelter }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme();
-  const language = languages.swedish;
+  const language = useLanguage();
 
   return (
     <Pressable onPress={() => setIsOpen(!isOpen)}>
       <View style={s.card} surface>
         <View style={s.cardImageContainer} background>
-          {shelter.image ? <Image style={s.image} source={shelter.image as any} /> : <Ionicons name="eye-off-outline" color={theme.primary} />}
+          {shelter.image ? <Image style={s.image} source={shelter.image as any} /> : <Ionicons name="eye-off-outline" color={theme.primary} size={40} />}
         </View>
         <View style={s.cardContent}>
           <Text style={s.cardTitle}>{shelter.name}</Text>

@@ -2,6 +2,6 @@ import { english } from "./english";
 import { swedish } from "./swedish";
 
 export const languages = {
-  swedish,
-  english,
+  [swedish.key]: swedish,
+  [english.key]: english,
 }

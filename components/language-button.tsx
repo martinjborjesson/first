@@ -1,4 +1,4 @@
-
+import { useLanguage, useSetLanguage } from "@/hooks/use-language";
 import { useTheme } from "@/hooks/use-theme";
 import { languages } from "@/languages";
 import { Ionicons } from "@expo/vector-icons";
@@ -9,15 +9,16 @@ import View from "./replacements/view";
 
 export default function LanguageButton() {
   const theme = useTheme();
-  const language = languages.swedish;
+  const language = useLanguage();
+  const setLanguage = useSetLanguage();
+
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <>
       <Pressable
         style={[s.button, { backgroundColor: theme.surface, borderColor: theme.primary }]}
-        onPress={() => { }}
-        onLongPress={() => setModalVisible(true)}
+        onPress={() => setModalVisible(true)}
       >
         <Text style={{ color: theme.text }}>{language.name}</Text>
       </Pressable>
@@ -38,14 +39,17 @@ export default function LanguageButton() {
               <ScrollView style={{ maxHeight: 300 }}>
                 {Object.values(languages)
                   .sort((a, b) => a.name.localeCompare(b.name))
-                  .map((language) => (
+                  .map((l) => (
                     <Pressable
-                      key={language.name}
-                      // onPress={() => setLanguage(language)}
-                      onPress={() => { }}
-                      style={s.themeButton}
+                      key={l.key}
+                      onPress={() => {
+                        setLanguage(l.key)
+                        setModalVisible(false)
+                      }}
+                      style={s.languageButton}
                     >
-                      <Text>{language.name}</Text>
+                      <Text>{l.name}</Text>
+                      {l === language ? <Ionicons name={"checkmark"} color={theme.primary} size={18} /> : null}
                     </Pressable>
                   ))}
               </ScrollView>
@@ -94,7 +98,7 @@ const s = StyleSheet.create({
     marginBottom: 10,
     fontWeight: "600",
   },
-  themeButton: {
+  languageButton: {
     flexDirection: "row",
     alignItems: "center",
     gap: 10,

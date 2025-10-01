@@ -1,4 +1,5 @@
 export const english = {
+  key: "en-US",
   name: "English",
   tabs: {
     home: "Home",

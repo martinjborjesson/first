@@ -2,14 +2,18 @@ import BackgroundImage from "@/components/background-image";
 import SafeAreaView from "@/components/replacements/safe-area-view";
 import Text from "@/components/replacements/text";
 import View from "@/components/replacements/view";
+import { mockData } from "@/data";
+import { useLanguage } from "@/hooks/use-language";
 import { useTheme } from "@/hooks/use-theme";
-import { languages } from "@/languages";
 import { Ionicons } from "@expo/vector-icons";
 import { Image, StyleSheet } from "react-native";
 
 export default function HomeScreen() {
   const theme = useTheme();
-  const language = languages.swedish;
+  const language = useLanguage();
+
+  const sheltersWithImage = mockData.filter(s => s.image != undefined)
+  const shelter = sheltersWithImage[Math.floor(Math.random() * sheltersWithImage.length)];
 
   return (
     <SafeAreaView>
@@ -25,8 +29,8 @@ export default function HomeScreen() {
           </Text>
         </View>
         <View style={s.imageContainer}>
-          <Image source={require("@/assets/app/shelter-images/0001.jpg")} style={s.image} />
-          <Text style={s.imageText}>Hålehall, skåneleden</Text>
+          <Image source={shelter.image as any} style={s.image} />
+          <Text style={s.imageText}>{shelter.name}</Text>
         </View>
       </View>
     </SafeAreaView>
@@ -58,7 +62,7 @@ const s = StyleSheet.create({
   image: {
     width: 300,
     height: 200,
-    resizeMode: "cover",
+    objectFit: "cover",
     padding: 2,
     borderRadius: 5,
   },

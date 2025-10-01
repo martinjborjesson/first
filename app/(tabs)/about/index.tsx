@@ -2,11 +2,11 @@ import BackgroundImage from "@/components/background-image";
 import SafeAreaView from "@/components/replacements/safe-area-view";
 import Text from "@/components/replacements/text";
 import View from "@/components/replacements/view";
-import { languages } from "@/languages";
+import { useLanguage } from "@/hooks/use-language";
 import { ScrollView, StyleSheet } from "react-native";
 
 export default function AboutScreen() {
-  const language = languages.swedish;
+  const language = useLanguage();
   const versionNumber = "1.0.0"
 
   return (

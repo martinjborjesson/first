@@ -1,4 +1,5 @@
 export const swedish = {
+  key: "sv-SE",
   name: "Svenska",
   tabs: {
     home: "Hem",
