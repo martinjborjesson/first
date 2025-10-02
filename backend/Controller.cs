@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Krydda;
 
 [ApiController]
-[Route("shelter")]
+[Route("campsite")]
 public class ShelterController : ControllerBase
 {
     private readonly IWebHostEnvironment _env;
@@ -25,7 +25,7 @@ public class ShelterController : ControllerBase
             return BadRequest(_badRequestMessage);
         }
 
-        string? targetDir = Path.Combine(_env.ContentRootPath, "..", "assets", "app", "shelter-images");
+        string? targetDir = Path.Combine(_env.ContentRootPath, "..", "assets", "app", "campsite-images");
         Directory.CreateDirectory(targetDir);
 
         string? targetPath = Path.Combine(targetDir, fileName);
@@ -43,7 +43,7 @@ public class ShelterController : ControllerBase
     [HttpGet("{fileName}")]
     public IActionResult Get(string fileName)
     {
-        string? targetPath = Path.Combine(_env.ContentRootPath, "..", "assets", "app", "shelter-images", fileName);
+        string? targetPath = Path.Combine(_env.ContentRootPath, "..", "assets", "app", "campsite-images", fileName);
 
         if (!System.IO.File.Exists(targetPath))
         {

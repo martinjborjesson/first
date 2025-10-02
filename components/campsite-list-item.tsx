@@ -1,6 +1,6 @@
 import { useLanguage } from "@/hooks/use-language";
 import { useTheme } from "@/hooks/use-theme";
-import { CampingSite } from "@/types/types";
+import { Campsite } from "@/types/types";
 import { Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
 import { Image, Pressable, StyleSheet } from "react-native";
@@ -8,10 +8,10 @@ import Text from "./replacements/text";
 import View from "./replacements/view";
 
 type Props = {
-  shelter: CampingSite;
+  campsite: Campsite;
 }
 
-export default function ShelterListItem({ shelter }: Props) {
+export default function CampsiteListItem({ campsite: campsite }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme();
   const language = useLanguage();
@@ -20,21 +20,21 @@ export default function ShelterListItem({ shelter }: Props) {
     <Pressable onPress={() => setIsOpen(!isOpen)}>
       <View style={s.card} surface>
         <View style={s.cardImageContainer} background>
-          {shelter.image ? <Image style={s.image} source={{ uri: shelter.image }} /> : <Ionicons name="eye-off-outline" color={theme.primary} size={40} />}
+          {campsite.image ? <Image style={s.image} source={{ uri: campsite.image }} /> : <Ionicons name="eye-off-outline" color={theme.primary} size={40} />}
         </View>
         <View style={s.cardContent}>
-          <Text style={s.cardTitle}>{shelter.name}</Text>
-          <Text style={s.cardDescription}>{shelter.description}</Text>
+          <Text style={s.cardTitle}>{campsite.name}</Text>
+          <Text style={s.cardDescription}>{campsite.description}</Text>
           {!isOpen && <View style={{ flex: 1, justifyContent: "flex-end" }}><Text style={s.press}>{language.places.press}</Text></View>}
           {isOpen &&
             <View>
-              {shelter.firePlace && <Text>{"• " + language.places.fireplace}</Text>}
-              {shelter.fireWood && <Text>{"• " + language.places.fireWood}</Text>}
-              {shelter.shelter && <Text>{"• " + language.places.shelter}</Text>}
-              {shelter.water && <Text>{"• " + language.places.water}</Text>}
-              {shelter.drinkingWater && <Text>{"• " + language.places.drinkingWater}</Text>}
-              {shelter.toilet && <Text>{"• " + language.places.toilet}</Text>}
-              {shelter.note && <Text style={s.cardNote}>{shelter.note}</Text>}
+              {campsite.firePlace && <Text>{"• " + language.places.fireplace}</Text>}
+              {campsite.fireWood && <Text>{"• " + language.places.fireWood}</Text>}
+              {campsite.shelter && <Text>{"• " + language.places.shelter}</Text>}
+              {campsite.water && <Text>{"• " + language.places.water}</Text>}
+              {campsite.drinkingWater && <Text>{"• " + language.places.drinkingWater}</Text>}
+              {campsite.toilet && <Text>{"• " + language.places.toilet}</Text>}
+              {campsite.note && <Text style={s.cardNote}>{campsite.note}</Text>}
             </View>
           }
         </View>

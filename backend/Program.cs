@@ -9,7 +9,6 @@ internal class Program
 
         WebApplication app = builder.Build();
 
-        // app.UseHttpsRedirection();
         app.UseAuthorization();
         app.MapControllers();
 

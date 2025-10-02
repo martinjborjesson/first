@@ -10,7 +10,7 @@ export type Theme = {
   text: string,
 };
 
-export type CampingSite = {
+export type Campsite = {
   id: string,
   name: string,
   image?: string,

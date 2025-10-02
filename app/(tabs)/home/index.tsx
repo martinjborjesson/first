@@ -12,8 +12,8 @@ export default function HomeScreen() {
   const theme = useTheme();
   const language = useLanguage();
 
-  const sheltersWithImage = mockData.filter(s => s.image != undefined)
-  const shelter = sheltersWithImage[Math.floor(Math.random() * sheltersWithImage.length)];
+  const campsitesWithImage = mockData.filter(c => c.image != undefined)
+  const campsite = campsitesWithImage[Math.floor(Math.random() * campsitesWithImage.length)];
 
   return (
     <SafeAreaView>
@@ -29,8 +29,8 @@ export default function HomeScreen() {
           </Text>
         </View>
         <View style={s.imageContainer}>
-          <Image source={{ uri: shelter.image }} style={s.image} />
-          <Text style={s.imageText}>{shelter.name}</Text>
+          <Image source={{ uri: campsite.image }} style={s.image} />
+          <Text style={s.imageText}>{campsite.name}</Text>
         </View>
       </View>
     </SafeAreaView>

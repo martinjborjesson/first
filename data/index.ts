@@ -1,11 +1,11 @@
 import { API_IP } from "@/API_CONFIG"
-import { CampingSite } from "@/types/types"
+import { Campsite } from "@/types/types"
 
-export const mockData: CampingSite[] = [
+export const mockData: Campsite[] = [
   {
     id: "0001",
     name: "Hålehall",
-    image: `http://${API_IP}/shelter/0001.jpg`,
+    image: `http://${API_IP}/campsite/0001.jpg`,
     description: "Lägerplats med vindskydd på lövskogshöjd.",
     coordinates: {
       longitude: 12.845264,
@@ -22,7 +22,7 @@ export const mockData: CampingSite[] = [
   {
     id: "0002",
     name: "Bottnamaden",
-    image: `http://${API_IP}/shelter/0002.jpg`,
+    image: `http://${API_IP}/campsite/0002.jpg`,
     description: "Vindskydd med eldplats beläget vid Jälmån.",
     coordinates: {
       longitude: 13.5046,
@@ -53,7 +53,7 @@ export const mockData: CampingSite[] = [
   {
     id: "0004",
     name: "Abborrsjön",
-    image: `http://${API_IP}/shelter/0004.jpg`,
+    image: `http://${API_IP}/campsite/0004.jpg`,
     description: "Vindskydd med grillplats intill Abborrsjön.",
     coordinates: {
       longitude: 12.6238,
@@ -69,7 +69,7 @@ export const mockData: CampingSite[] = [
   {
     id: "0005",
     name: "Säven",
-    image: `http://${API_IP}/shelter/0005.jpg`,
+    image: `http://${API_IP}/campsite/0005.jpg`,
     description: "En sjö. Jäkligt fint på sommarn.",
     coordinates: {
       longitude: 12.8693,
@@ -102,7 +102,7 @@ export const mockData: CampingSite[] = [
   {
     id: "0007",
     name: "Lägerplats 86 Hängesten",
-    image: `http://${API_IP}/shelter/0007.jpg`,
+    image: `http://${API_IP}/campsite/0007.jpg`,
     description: "Halvö i Östra Silen.",
     coordinates: {
       longitude: 12.279743856354196,

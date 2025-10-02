@@ -1,15 +1,15 @@
 import BackgroundImage from "@/components/background-image";
+import CampsiteListItem from "@/components/campsite-list-item";
 import SafeAreaView from "@/components/replacements/safe-area-view";
 import Text from "@/components/replacements/text";
 import View from "@/components/replacements/view";
-import ShelterListItem from "@/components/shelter-list-item";
 import { mockData } from "@/data";
 import { useLanguage } from "@/hooks/use-language";
 import { ScrollView, StyleSheet } from "react-native";
 
 export default function PlacesScreen() {
   const language = useLanguage();
-  const shelters = mockData;
+  const campsites = mockData;
 
   return (
     <SafeAreaView>
@@ -19,8 +19,8 @@ export default function PlacesScreen() {
           <Text style={s.bigText}>
             {language.places.title}
           </Text>
-          {shelters.map((s) => {
-            return <ShelterListItem shelter={s} key={s.id} />
+          {campsites.map((c) => {
+            return <CampsiteListItem campsite={c} key={c.id} />
           })}
 
         </View>
