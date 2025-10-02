@@ -20,7 +20,7 @@ export default function ShelterListItem({ shelter }: Props) {
     <Pressable onPress={() => setIsOpen(!isOpen)}>
       <View style={s.card} surface>
         <View style={s.cardImageContainer} background>
-          {shelter.image ? <Image style={s.image} source={shelter.image as any} /> : <Ionicons name="eye-off-outline" color={theme.primary} size={40} />}
+          {shelter.image ? <Image style={s.image} source={{ uri: shelter.image }} /> : <Ionicons name="eye-off-outline" color={theme.primary} size={40} />}
         </View>
         <View style={s.cardContent}>
           <Text style={s.cardTitle}>{shelter.name}</Text>

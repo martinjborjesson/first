@@ -29,7 +29,7 @@ export default function HomeScreen() {
           </Text>
         </View>
         <View style={s.imageContainer}>
-          <Image source={shelter.image as any} style={s.image} />
+          <Image source={{ uri: shelter.image }} style={s.image} />
           <Text style={s.imageText}>{shelter.name}</Text>
         </View>
       </View>
