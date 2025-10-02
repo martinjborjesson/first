@@ -4,10 +4,24 @@ En app som låter användaren dela med sig och ta del av information om lägerpl
 
 ## Installation
 
-1. Öppna terminal från valfri plats och kör:
-2. `git clone https://github.com/martinjborjesson/first.git`
-3. `npm install`
-4. `npm start`
+1. Klona projektet
+```bash
+git clone https://github.com/martinjborjesson/first.git
+```
+2. installera beroenden
+```bash
+npm install
+```
+3. Ändra IP i API_CONFIG.ts (lokalt, `192.168.x.x`)
+4. Starta backend-servern
+```bash
+cd backend
+dotnet run
+```
+5. Starta Expo-appen
+```bash
+npx expo start --tunnel
+```
 
 ## Krav för inlämningen
 
@@ -16,29 +30,33 @@ En app som låter användaren dela med sig och ta del av information om lägerpl
 - [X] React Navigation används för att skapa en bättre upplevelse i appen.
 - [X] Git & GitHub har använts
 - [X] Projektmappen innehåller en README.md fil - (läs ovan för mer info)
-- [ ] Uppgiften lämnas in i tid!
+- [X] Uppgiften lämnas in i tid!
 - [ ] Muntlig presentation är genomförd.
 
 ### Komponenter - React Native
 
-- `<View>`
-- `<ScrollView>`
-- `<SafeAreaView>`
-- `<Image>`
-- `<Text>`
-- `<Pressable>`
-- `<Modal>`
+```tsx
+<View>
+<ScrollView>
+<SafeAreaView>
+<Image>
+<Text>
+<Pressable>
+<Modal>
+```
 
 ### Komponenter - Expo SDK
 
-- `NavigationBar`
-- `Haptics`
-- `Location`
+```tsx
+- NavigationBar
+- Haptics
+- Location
+```
 
 ### Krav för väl godkänt:
 
 - [ ] Alla punkter för godkänt är uppfyllda
 - [X] Ytterligare en valfri extern modul används i projektet (ex. react-hook-form).
     - `React Native Maps`
-- [ ] Appen ska prata med ett Web-API för att hämta data.
+- [X] Appen ska prata med ett Web-API för att hämta data.
 - [ ] Appen ska förberedas för lansering till en Appstore (Deadline samma dag som kursen slutar)
