@@ -1,3 +1,4 @@
+import AddCampsiteButton from "@/components/add-campsite-button";
 import CurrentLocationButton from "@/components/current-location-button";
 import EasterEgg from "@/components/easter-egg";
 import View from "@/components/replacements/view";
@@ -52,6 +53,7 @@ export default function MapScreen() {
         }}
         showsUserLocation={true}
         showsMyLocationButton={false}
+        toolbarEnabled={false}
       >
         <EasterEgg />
         {markers.map((m) => {
@@ -76,7 +78,10 @@ export default function MapScreen() {
         })}
       </MapView>
 
-      <CurrentLocationButton location={location} mapRef={mapRef} />
+      <View>
+        <AddCampsiteButton location={location} />
+        <CurrentLocationButton location={location} mapRef={mapRef} />
+      </View>
     </View>
   );
 }
