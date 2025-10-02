@@ -25,7 +25,7 @@ npx expo start --tunnel
 
 ## Krav för inlämningen
 
-- [ ] Projektet använder minst 4 stycken RN-komponenter och minst 4 stycken Expo komponenter.
+- [X] Projektet använder minst 4 stycken RN-komponenter och minst 4 stycken Expo komponenter.
 - [X] De utvalda komponenterna MÅSTE antecknas i README filen tillsammans med en lista över genomförda krav.
 - [X] React Navigation används för att skapa en bättre upplevelse i appen.
 - [X] Git & GitHub har använts
@@ -51,6 +51,7 @@ npx expo start --tunnel
 - NavigationBar
 - Haptics
 - Location
+- ImagePicker
 ```
 
 ### Krav för väl godkänt:
@@ -58,5 +59,6 @@ npx expo start --tunnel
 - [ ] Alla punkter för godkänt är uppfyllda
 - [X] Ytterligare en valfri extern modul används i projektet (ex. react-hook-form).
     - `React Native Maps`
+    - `React Hook Form`
 - [X] Appen ska prata med ett Web-API för att hämta data.
 - [ ] Appen ska förberedas för lansering till en Appstore (Deadline samma dag som kursen slutar)
