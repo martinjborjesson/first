@@ -31,3 +31,15 @@ export type Coordinates = {
 }
 
 export type Language = keyof typeof languages;
+
+export type NewCampsiteFormData = {
+  name: string,
+  description: string,
+  firePlace: boolean,
+  fireWood: boolean,
+  shelter: boolean,
+  water: boolean,
+  drinkingWater: boolean,
+  note: string,
+  toilet: boolean,
+}
