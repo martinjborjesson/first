@@ -1,4 +1,5 @@
 
+import { useLanguage } from "@/hooks/use-language";
 import { useSetTheme, useTheme, useToggleTheme } from "@/hooks/use-theme";
 import { themesList } from "@/themes/theme";
 import { Ionicons } from "@expo/vector-icons";
@@ -9,6 +10,7 @@ import View from "./replacements/view";
 
 export default function ThemeButton() {
   const theme = useTheme();
+  const language = useLanguage();
   const toggleTheme = useToggleTheme();
   const setTheme = useSetTheme();
   const [modalVisible, setModalVisible] = useState(false);
@@ -33,7 +35,7 @@ export default function ThemeButton() {
           <View style={s.modalOverlay}>
             <View style={[s.modalContent, { backgroundColor: theme.background }]}>
               <View style={s.modalHeader}>
-                <Text style={[s.modalTitle, { color: theme.text }]}>Välj tema</Text>
+                <Text style={s.modalTitle}>{language.settings.chooseTheme}</Text>
               </View>
 
               <ScrollView style={{ maxHeight: 300 }}>
@@ -50,13 +52,14 @@ export default function ThemeButton() {
                     >
                       {t.isDarkMode ? <Ionicons name="moon" color={theme.text} /> : <Ionicons name="sunny" color={theme.text} />}
                       <Text>{t.name}</Text>
+                      {t === theme ? <Ionicons name={"checkmark"} color={theme.primary} size={18} /> : null}
                     </Pressable>
                   ))}
               </ScrollView>
 
               <View style={s.back}>
                 <Pressable onPress={() => setModalVisible(false)} style={s.backButton}>
-                  <Text>Tillbaka</Text>
+                  <Text>{language.settings.back}</Text>
                   <Ionicons name="chevron-back-circle-outline" color={theme.primary} size={24} />
                 </Pressable>
               </View>
