@@ -20,7 +20,7 @@ export type Campsite = {
   fireWood?: boolean,
   shelter?: boolean,
   water?: boolean,
-  drinkingWater?: boolean,
+  drinkableWater?: boolean,
   note?: string,
   toilet?: boolean,
 }
@@ -39,7 +39,7 @@ export type NewCampsiteFormData = {
   fireWood: boolean,
   shelter: boolean,
   water: boolean,
-  drinkingWater: boolean,
+  drinkableWater: boolean,
   note: string,
   toilet: boolean,
 }

@@ -10,6 +10,7 @@ export const english = {
   },
   home: {
     greeting: "Discover, share and rate camp sites.",
+    loading: "Loading campsites...",
   },
   map: {
     close: "Close",
@@ -25,7 +26,7 @@ export const english = {
       fireWood: "Firewood",
       shelter: "Shelter",
       water: "Swimming",
-      drinkingWater: "Drinkable water",
+      drinkableWater: "Drinkable water",
       toilet: "Toilet",
       note: "Note",
       requiredName: "Name is required",
@@ -41,7 +42,7 @@ export const english = {
     fireWood: "Firewood",
     shelter: "Shelter",
     water: "Swimming",
-    drinkingWater: "Drinkable water",
+    drinkableWater: "Drinkable water",
     toilet: "Toilet",
     press: "Tap for more details..."
   },

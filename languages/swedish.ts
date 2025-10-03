@@ -10,6 +10,7 @@ export const swedish = {
   },
   home: {
     greeting: "Upptäck, dela och betygsätt lägerplatser.",
+    loading: "Laddar lägerplatser...",
   },
   map: {
     close: "Avbryt",
@@ -25,7 +26,7 @@ export const swedish = {
       fireWood: "Ved",
       shelter: "Vindskydd",
       water: "Badmöjligheter",
-      drinkingWater: "Dricksvatten",
+      drinkableWater: "Dricksvatten",
       toilet: "Toalett",
       note: "Anteckning",
       requiredName: "Namn krävs",
@@ -41,7 +42,7 @@ export const swedish = {
     fireWood: "Ved",
     shelter: "Vindskydd",
     water: "Badmöjligheter",
-    drinkingWater: "Dricksvatten",
+    drinkableWater: "Dricksvatten",
     toilet: "Toalett",
     press: "Tryck för mer information..."
   },
