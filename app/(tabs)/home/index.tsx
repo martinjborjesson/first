@@ -1,8 +1,9 @@
+import { API_IP } from "@/API_CONFIG";
 import BackgroundImage from "@/components/background-image";
 import SafeAreaView from "@/components/replacements/safe-area-view";
 import Text from "@/components/replacements/text";
 import View from "@/components/replacements/view";
-import { mockData } from "@/data";
+import useCampsites from "@/hooks/use-campsites";
 import { useLanguage } from "@/hooks/use-language";
 import { useTheme } from "@/hooks/use-theme";
 import { Ionicons } from "@expo/vector-icons";
@@ -11,8 +12,21 @@ import { Image, StyleSheet } from "react-native";
 export default function HomeScreen() {
   const theme = useTheme();
   const language = useLanguage();
+  const { campsites } = useCampsites();
 
-  const campsitesWithImage = mockData.filter(c => c.image != undefined)
+  if (campsites.length === 0) {
+    return (
+      <SafeAreaView>
+        <BackgroundImage />
+        <View style={s.container}>
+          <Text>{language.home.loading}</Text>
+        </View>
+
+      </SafeAreaView>
+    )
+  }
+
+  const campsitesWithImage = campsites.filter(c => c.image != undefined)
   const campsite = campsitesWithImage[Math.floor(Math.random() * campsitesWithImage.length)];
 
   return (
@@ -29,7 +43,7 @@ export default function HomeScreen() {
           </Text>
         </View>
         <View style={s.imageContainer}>
-          <Image source={{ uri: campsite.image }} style={s.image} />
+          <Image source={{ uri: `http://${API_IP}/campsite/image/${campsite.image}?v=${Date.now()}` }} style={s.image} />
           <Text style={s.imageText}>{campsite.name}</Text>
         </View>
       </View>

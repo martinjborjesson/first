@@ -3,13 +3,13 @@ import CampsiteListItem from "@/components/campsite-list-item";
 import SafeAreaView from "@/components/replacements/safe-area-view";
 import Text from "@/components/replacements/text";
 import View from "@/components/replacements/view";
-import { mockData } from "@/data";
+import useCampsites from "@/hooks/use-campsites";
 import { useLanguage } from "@/hooks/use-language";
 import { ScrollView, StyleSheet } from "react-native";
 
 export default function PlacesScreen() {
   const language = useLanguage();
-  const campsites = mockData;
+  const { campsites } = useCampsites();
 
   return (
     <SafeAreaView>

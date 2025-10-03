@@ -1,7 +1,8 @@
-import { mockData } from "@/data";
+import { API_IP } from "@/API_CONFIG";
+import useCampsites from "@/hooks/use-campsites";
 import { useLanguage } from "@/hooks/use-language";
 import { useTheme } from "@/hooks/use-theme";
-import { Campsite, NewCampsiteFormData } from "@/types/types";
+import { NewCampsiteFormData } from "@/types/types";
 import { Ionicons } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 import * as Location from "expo-location";
@@ -20,7 +21,7 @@ export default function AddCampsiteForm({ location, onClose }: Props) {
   const theme = useTheme();
   const language = useLanguage();
   const [image, setImage] = useState<string | undefined>(undefined)
-  const campsites = mockData;
+  const { campsites, refetch } = useCampsites();
 
   if (!location || !campsites) return null;
 
@@ -32,7 +33,7 @@ export default function AddCampsiteForm({ location, onClose }: Props) {
       fireWood: false,
       shelter: false,
       water: false,
-      drinkingWater: false,
+      drinkableWater: false,
       note: "",
       toilet: false,
     }
@@ -50,21 +51,58 @@ export default function AddCampsiteForm({ location, onClose }: Props) {
     }
   }
 
-  function onSubmit(data: NewCampsiteFormData) {
-    const newCampsite: Campsite = {
-      ...data,
-      id: calculateNewId(campsites),
-      image,
+  async function saveNewCampsite(data: NewCampsiteFormData) {
+    const dto = {
+      name: data.name,
+      description: data.description,
       coordinates: {
         longitude: location!.coords.longitude,
         latitude: location!.coords.latitude,
       },
+      firePlace: data.firePlace,
+      fireWood: data.fireWood,
+      shelter: data.shelter,
+      water: data.water,
+      drinkableWater: data.drinkableWater,
+      note: data.note,
+      toilet: data.toilet,
     };
 
-    console.log("New campsite: ", newCampsite);
-    saveNewCampsite(newCampsite);
+    console.log("Sending DTO to backend:", dto);
 
-    onClose();
+    const response = await fetch(`http://${API_IP}/campsite/add`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dto),
+    });
+
+    const result = await response.json();
+    const newId = result.id;
+
+    if (image) {
+      const formData = new FormData();
+      formData.append("file", {
+        uri: image,
+        name: `${newId}.jpg`,
+        type: "image/jpeg",
+      } as any);
+
+      await fetch(`http://${API_IP}/campsite/image/${newId}.jpg`, {
+        method: "POST",
+        body: formData,
+      });
+    }
+  }
+
+  async function onSubmit(data: NewCampsiteFormData) {
+    console.log("Submitting campsite: ", data);
+    try {
+      await saveNewCampsite(data);
+      await refetch();
+      onClose();
+    } catch (err) {
+      console.error("Failed to save campsite:", err);
+    }
   }
 
   return (
@@ -195,10 +233,10 @@ export default function AddCampsiteForm({ location, onClose }: Props) {
 
       <Controller
         control={control}
-        name="drinkingWater"
+        name="drinkableWater"
         render={({ field: { value, onChange } }) => (
           <View style={s.booleanRow}>
-            <Text>{language.map.addCampsite.drinkingWater}</Text>
+            <Text>{language.map.addCampsite.drinkableWater}</Text>
             <Switch
               value={value}
               onValueChange={onChange}
@@ -302,16 +340,3 @@ const s = StyleSheet.create({
     gap: 5,
   },
 })
-
-function calculateNewId(campsites: Campsite[]) {
-  const campsitesId = campsites.map(c => parseInt(c.id, 10));
-  const highestId = Math.max(...campsitesId);
-  const newId = String(highestId + 1).padStart(4, "0");
-
-  return newId;
-}
-
-function saveNewCampsite(campsite: Campsite) {
-
-}
-

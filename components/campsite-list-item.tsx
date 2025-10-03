@@ -1,3 +1,4 @@
+import { API_IP } from "@/API_CONFIG";
 import { useLanguage } from "@/hooks/use-language";
 import { useTheme } from "@/hooks/use-theme";
 import { Campsite } from "@/types/types";
@@ -11,7 +12,7 @@ type Props = {
   campsite: Campsite;
 }
 
-export default function CampsiteListItem({ campsite: campsite }: Props) {
+export default function CampsiteListItem({ campsite }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme();
   const language = useLanguage();
@@ -20,7 +21,7 @@ export default function CampsiteListItem({ campsite: campsite }: Props) {
     <Pressable onPress={() => setIsOpen(!isOpen)}>
       <View style={s.card} surface>
         <View style={s.cardImageContainer} background>
-          {campsite.image ? <Image style={s.image} source={{ uri: campsite.image }} /> : <Ionicons name="eye-off-outline" color={theme.primary} size={40} />}
+          {campsite.image ? <Image style={s.image} source={{ uri: `http://${API_IP}/campsite/image/${campsite.image}?v=${Date.now()}` }} /> : <Ionicons name="eye-off-outline" color={theme.primary} size={40} />}
         </View>
         <View style={s.cardContent}>
           <Text style={s.cardTitle}>{campsite.name}</Text>
@@ -32,7 +33,7 @@ export default function CampsiteListItem({ campsite: campsite }: Props) {
               {campsite.fireWood && <Text>{"• " + language.places.fireWood}</Text>}
               {campsite.shelter && <Text>{"• " + language.places.shelter}</Text>}
               {campsite.water && <Text>{"• " + language.places.water}</Text>}
-              {campsite.drinkingWater && <Text>{"• " + language.places.drinkingWater}</Text>}
+              {campsite.drinkableWater && <Text>{"• " + language.places.drinkableWater}</Text>}
               {campsite.toilet && <Text>{"• " + language.places.toilet}</Text>}
               {campsite.note && <Text style={s.cardNote}>{campsite.note}</Text>}
             </View>

@@ -2,7 +2,7 @@ import AddCampsiteButton from "@/components/add-campsite-button";
 import CurrentLocationButton from "@/components/current-location-button";
 import EasterEgg from "@/components/easter-egg";
 import View from "@/components/replacements/view";
-import { mockData } from "@/data";
+import useCampsites from "@/hooks/use-campsites";
 import { useTheme } from "@/hooks/use-theme";
 import { darkMapTheme } from "@/themes/dark-map-theme";
 import { Ionicons } from "@expo/vector-icons";
@@ -13,6 +13,7 @@ import MapView, { Marker } from "react-native-maps";
 
 export default function MapScreen() {
   const theme = useTheme();
+  const { campsites } = useCampsites();
   const mapRef = useRef<MapView>(null);
   const [location, setLocation] = useState<Location.LocationObject | null>(null)
 
@@ -32,7 +33,8 @@ export default function MapScreen() {
     getCurrentLocation();
   }, []);
 
-  const markers = mockData.map(({ id, name, description, coordinates }) => ({
+  // const markers = mockData.map(({ id, name, description, coordinates }) => ({
+  const markers = campsites.map(({ id, name, description, coordinates }) => ({
     id,
     name,
     description,
