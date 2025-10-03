@@ -1,0 +1,138 @@
+[
+  {
+    "id": "0001",
+    "name": "H\u00E5lehall",
+    "image": "0001.jpg",
+    "description": "L\u00E4gerplats med vindskydd p\u00E5 l\u00F6vskogsh\u00F6jd.",
+    "coordinates": {
+      "longitude": 12.845264,
+      "latitude": 56.361773
+    },
+    "firePlace": true,
+    "fireWood": true,
+    "shelter": true,
+    "water": true,
+    "drinkableWater": true,
+    "note": "P\u00E5 grund av vedst\u00F6lder kan vi inte garantera att det finns ved vid v\u00E5ra l\u00E4gerplatser. Om det \u00E4r m\u00F6jligt uppmanar vi till att ta med sig egen ved. T\u00E4nk p\u00E5 att ta v\u00E4l hand om naturen!",
+    "toilet": false
+  },
+  {
+    "id": "0002",
+    "name": "Bottnamaden",
+    "image": "0002.jpg",
+    "description": "Vindskydd med eldplats beläget vid Jälmån.",
+    "coordinates": {
+      "longitude": 13.5046,
+      "latitude": 57.5715
+    },
+    "firePlace": true,
+    "fireWood": true,
+    "shelter": true,
+    "water": true,
+    "drinkableWater": false,
+    "note": "",
+    "toilet": false
+  },
+  {
+    "id": "0003",
+    "name": "Holmforsen",
+    "image": null,
+    "description": "Vindskydd med eldplats beläget vid Jälmån.",
+    "coordinates": {
+      "longitude": 13.5107,
+      "latitude": 57.5863
+    },
+    "firePlace": true,
+    "fireWood": true,
+    "shelter": true,
+    "water": true,
+    "drinkableWater": true,
+    "note": "",
+    "toilet": false
+  },
+  {
+    "id": "0004",
+    "name": "Abborrsjön",
+    "image": "0004.jpg",
+    "description": "Vindskydd med grillplats intill Abborrsjön.",
+    "coordinates": {
+      "longitude": 12.6238,
+      "latitude": 57.7072
+    },
+    "firePlace": true,
+    "fireWood": false,
+    "shelter": true,
+    "water": true,
+    "drinkableWater": false,
+    "note": "",
+    "toilet": false
+  },
+  {
+    "id": "0005",
+    "name": "Säven",
+    "image": "0005.jpg",
+    "description": "En sjö. Jäkligt fint på sommarn.",
+    "coordinates": {
+      "longitude": 12.8693,
+      "latitude": 57.8845
+    },
+    "firePlace": false,
+    "fireWood": false,
+    "shelter": false,
+    "water": true,
+    "drinkableWater": false,
+    "note": "Vansinnigt mycket fästingar här. Garanterat någon i sälskapet kommer att få med sig några hem.",
+    "toilet": false
+  },
+  {
+    "id": "0006",
+    "name": "Karlsro Rastplats",
+    "image": null,
+    "description": "Bra ställe för kaffepaus.",
+    "coordinates": {
+      "longitude": 12.265,
+      "latitude": 58.365
+    },
+    "firePlace": false,
+    "fireWood": false,
+    "shelter": false,
+    "water": false,
+    "drinkableWater": false,
+    "note": "Stor rastplats på asfalt och grus ganska nära vägen med rastplatsmöbler.",
+    "toilet": true
+  },
+  {
+    "id": "0007",
+    "name": "Lägerplats 86 Hängesten",
+    "image": "0007.jpg",
+    "description": "Halvö i Östra Silen.",
+    "coordinates": {
+      "longitude": 12.279743856354196,
+      "latitude": 59.192550999360385
+    },
+    "firePlace": true,
+    "fireWood": true,
+    "shelter": true,
+    "water": true,
+    "drinkableWater": false,
+    "note": "Det finns ett hundratal lägerplatser inom sjösystemet Dalsland-Nordmarken. Den ideella föreningen DANO har investerat i dessa för att skydda vår ömtåliga natur och för att ge dig som besökare en så bra upplevelse som möjligt. Platserna är utvalda med hänsyn till växt- och djurlivet och i överenskommelse med markägaren. De flesta platserna har idag ett vindskydd, alla har en fast iordningsställd eldstad och ekologisk toalett. Ett flertal sopstationer är fördelade i systemet. Denna service finansieras genom försäljningen av Naturvårdskort. ",
+    "toilet": true
+  },
+  {
+    "id": "0008",
+    "name": "Fjällsjön",
+    "image": null,
+    "description": "Konstigt byggt vindskydd.",
+    "coordinates": {
+      "longitude": 12.918819312934955,
+      "latitude": 57.76009295973071
+    },
+    "firePlace": true,
+    "fireWood": false,
+    "shelter": true,
+    "water": true,
+    "drinkableWater": false,
+    "note": "Vindskydd byggt på höjd med vältrafikerad stig mellan eldstad och skydd.",
+    "toilet": false
+  }
+]
