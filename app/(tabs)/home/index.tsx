@@ -21,12 +21,11 @@ export default function HomeScreen() {
         <View style={s.container}>
           <Text>{language.home.loading}</Text>
         </View>
-
       </SafeAreaView>
     )
   }
 
-  const campsitesWithImage = campsites.filter(c => c.image != undefined)
+  const campsitesWithImage = campsites.filter(c => c.image != undefined);
   const campsite = campsitesWithImage[Math.floor(Math.random() * campsitesWithImage.length)];
 
   return (

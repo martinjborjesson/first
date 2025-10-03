@@ -1,5 +1,5 @@
 // Ändra till serverns lokala IP
-const IP = "192.168.50.64"
+const IP = "192.168.50.126"
 
 // Låt vara kvar på 5000
 const PORT = "5000"

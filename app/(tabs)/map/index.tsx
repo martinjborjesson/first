@@ -33,7 +33,6 @@ export default function MapScreen() {
     getCurrentLocation();
   }, []);
 
-  // const markers = mockData.map(({ id, name, description, coordinates }) => ({
   const markers = campsites.map(({ id, name, description, coordinates }) => ({
     id,
     name,

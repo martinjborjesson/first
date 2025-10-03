@@ -22,7 +22,6 @@ export default function PlacesScreen() {
           {campsites.map((c) => {
             return <CampsiteListItem campsite={c} key={c.id} />
           })}
-
         </View>
       </ScrollView>
     </SafeAreaView>
