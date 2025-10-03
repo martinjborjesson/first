@@ -10,9 +10,10 @@ import View from "./replacements/view";
 
 type Props = {
   location: Location.LocationObject | null;
+  refetch: () => void;
 }
 
-export default function AddCampsiteButton({ location }: Props) {
+export default function AddCampsiteButton({ location, refetch }: Props) {
   const theme = useTheme();
   const language = useLanguage();
   const [modalVisible, setModalVisible] = useState(false);
@@ -41,7 +42,7 @@ export default function AddCampsiteButton({ location }: Props) {
                 <Text style={s.modalTitle}>{language.map.addCampsite.title}</Text>
               </View>
 
-              <AddCampsiteForm location={location} onClose={() => setModalVisible(false)} />
+              <AddCampsiteForm location={location} onClose={() => setModalVisible(false)} refetch={refetch} />
             </View>
           </View>
         </Modal>

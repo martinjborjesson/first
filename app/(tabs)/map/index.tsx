@@ -13,7 +13,7 @@ import MapView, { Marker } from "react-native-maps";
 
 export default function MapScreen() {
   const theme = useTheme();
-  const { campsites } = useCampsites();
+  const { campsites, refetch } = useCampsites();
   const mapRef = useRef<MapView>(null);
   const [location, setLocation] = useState<Location.LocationObject | null>(null)
 
@@ -80,7 +80,7 @@ export default function MapScreen() {
       </MapView>
 
       <View>
-        <AddCampsiteButton location={location} />
+        <AddCampsiteButton location={location} refetch={refetch} />
         <CurrentLocationButton location={location} mapRef={mapRef} />
       </View>
     </View>

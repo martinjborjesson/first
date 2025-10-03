@@ -15,13 +15,14 @@ import View from "./replacements/view";
 type Props = {
   location: Location.LocationObject | null;
   onClose: () => void;
+  refetch: () => void;
 }
 
-export default function AddCampsiteForm({ location, onClose }: Props) {
+export default function AddCampsiteForm({ location, onClose, refetch }: Props) {
   const theme = useTheme();
   const language = useLanguage();
   const [image, setImage] = useState<string | undefined>(undefined)
-  const { campsites, refetch } = useCampsites();
+  const { campsites } = useCampsites();
 
   if (!location || !campsites) return null;
 
