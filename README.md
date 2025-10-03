@@ -4,6 +4,8 @@ En app som låter användaren dela med sig och ta del av information om lägerpl
 
 ## Installation
 
+Om extern enhet andänds är det viktigt att servern och enheten är på samma lokala närverk.
+
 1. Klona projektet
 ```bash
 git clone https://github.com/martinjborjesson/first.git
@@ -18,7 +20,7 @@ npm install
 cd backend
 dotnet run
 ```
-5. Starta Expo-appen
+5. Starta Expo-appen (i separat terminal)
 ```bash
 npx expo start --tunnel
 ```
@@ -31,7 +33,7 @@ npx expo start --tunnel
 - [X] Git & GitHub har använts
 - [X] Projektmappen innehåller en README.md fil - (läs ovan för mer info)
 - [X] Uppgiften lämnas in i tid!
-- [ ] Muntlig presentation är genomförd.
+- [X] Muntlig presentation är genomförd.
 
 ### Komponenter - React Native
 
@@ -56,7 +58,7 @@ npx expo start --tunnel
 
 ### Krav för väl godkänt:
 
-- [ ] Alla punkter för godkänt är uppfyllda
+- [X] Alla punkter för godkänt är uppfyllda
 - [X] Ytterligare en valfri extern modul används i projektet (ex. react-hook-form).
     - `React Native Maps`
     - `React Hook Form`
