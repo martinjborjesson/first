@@ -52,6 +52,18 @@ export default function AddCampsiteForm({ location, onClose, refetch }: Props) {
     }
   }
 
+  async function takePhoto() {
+    let result = await ImagePicker.launchCameraAsync({
+      mediaTypes: ["images"],
+      allowsEditing: true,
+      quality: 0.5,
+    });
+
+    if (!result.canceled) {
+      setImage(result.assets[0].uri);
+    }
+  }
+
   async function saveNewCampsite(data: NewCampsiteFormData) {
     const dto = {
       name: data.name,
@@ -112,7 +124,7 @@ export default function AddCampsiteForm({ location, onClose, refetch }: Props) {
         <Pressable onPress={pickImage} style={[s.imageContainer, { backgroundColor: theme.surface, borderColor: theme.primary }]}>
           {!image && (
             <>
-              <Text>{language.map.addCampsite.image}</Text>
+              <Text>{language.map.addCampsite.imageGallery}</Text>
               <Ionicons name="image-outline" color={theme.primary} size={24} />
             </>
           )}
@@ -121,6 +133,17 @@ export default function AddCampsiteForm({ location, onClose, refetch }: Props) {
           )}
         </Pressable>
 
+        <Pressable onPress={takePhoto} style={[s.imageContainer, { backgroundColor: theme.surface, borderColor: theme.primary }]}>
+          {!image && (
+            <>
+              <Text>{language.map.addCampsite.imagePhoto}</Text>
+              <Ionicons name="camera-outline" color={theme.primary} size={24} />
+            </>
+          )}
+          {image && (
+            <Text>{language.map.addCampsite.imageExists}</Text>
+          )}
+        </Pressable>
       </View>
 
       <Text style={s.label}>{language.map.addCampsite.name}</Text>
@@ -302,14 +325,17 @@ const s = StyleSheet.create({
     gap: 2,
   },
   imagePicker: {
+    flexDirection: "row",
     alignItems: "center",
+    justifyContent: "center",
+    gap: 20,
   },
   imageContainer: {
     height: 100,
     width: 100,
     justifyContent: "center",
     alignItems: "center",
-    margin: 15,
+    marginVertical: 15,
     borderWidth: 1,
     borderRadius: 4,
   },
