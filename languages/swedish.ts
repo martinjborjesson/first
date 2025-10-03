@@ -17,7 +17,8 @@ export const swedish = {
     create: "Skapa",
     addCampsite: {
       title: "Lägg till lägerplats",
-      image: "Bild",
+      imagePhoto: "Ta foto",
+      imageGallery: "Sparad bild",
       imageExists: "Bild vald",
       name: "Namn",
       description: "Beskrivning",

@@ -17,7 +17,8 @@ export const english = {
     create: "Create",
     addCampsite: {
       title: "Add campsite",
-      image: "Image",
+      imagePhoto: "Take photo",
+      imageGallery: "Saved image",
       imageExists: "Image chosen",
       name: "Name",
       description: "Description",
