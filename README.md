@@ -7,23 +7,23 @@ En app som låter användaren dela med sig och ta del av information om lägerpl
 Om extern enhet andänds är det viktigt att servern och enheten är på samma lokala närverk.
 
 1. Klona projektet
-```bash
-git clone https://github.com/martinjborjesson/first.git
-```
+    ```bash
+    git clone https://github.com/martinjborjesson/first.git
+    ```
 2. installera beroenden
-```bash
-npm install
-```
+    ```bash
+    npm install
+    ```
 3. Ändra IP i API_CONFIG.ts (lokalt, `192.168.x.x`)
 4. Starta backend-servern
-```bash
-cd backend
-dotnet run
-```
+    ```bash
+    cd backend
+    dotnet run
+    ```
 5. Starta Expo-appen (i separat terminal)
-```bash
-npx expo start --tunnel
-```
+    ```bash
+    npx expo start --tunnel
+    ```
 
 ## Krav för inlämningen
 
