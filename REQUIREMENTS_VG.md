@@ -44,14 +44,14 @@ Ladda ner Lägerplatser.se idag och bidra till kartan över Sveriges bästa läg
 ## Applikationens ikon och laddningsbild.
 
 <figure>
-    <img src="./assets/images/icon.png" height="200">
-    <img src="./assets/images/splash-icon.png" height="200">
-    <img src="./assets/images/funktionsbild.png" height="200">
+    <img src="./assets/images/icon.png" height="200" alt="AppIkon">
+    <img src="./assets/images/splash-icon.png" height="200" alt="SplashScreen">
+    <img src="./assets/images/funktionsbild.png" height="200" alt="Funktionsbild">
 </figure>
 <figure>
-    <img src="./assets/images/screens/image-1-home.jpg" width="200">
-    <img src="./assets/images/screens/image-2-map.jpg" width="200">
-    <img src="./assets/images/screens/image-3-places.jpg" width="200">
+    <img src="./assets/images/screens/image-1-home.jpg" width="200" alt="Fönsterbild 1 Telefon">
+    <img src="./assets/images/screens/image-2-map.jpg" width="200" alt="Fönsterbild 2 Telefon">
+    <img src="./assets/images/screens/image-3-places.jpg" width="200" alt="Fönsterbild 3 Telefon">
 </figure>
 
 ---
