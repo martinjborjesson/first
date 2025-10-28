@@ -8,7 +8,13 @@ import * as ImagePicker from "expo-image-picker";
 import * as Location from "expo-location";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { Pressable, ScrollView, StyleSheet, Switch, TextInput } from "react-native";
+import {
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Switch,
+  TextInput,
+} from "react-native";
 import Text from "./replacements/text";
 import View from "./replacements/view";
 
@@ -16,12 +22,12 @@ type Props = {
   location: Location.LocationObject | null;
   onClose: () => void;
   refetch: () => void;
-}
+};
 
 export default function AddCampsiteForm({ location, onClose, refetch }: Props) {
   const theme = useTheme();
   const language = useLanguage();
-  const [image, setImage] = useState<string | undefined>(undefined)
+  const [image, setImage] = useState<string | undefined>(undefined);
   const { campsites } = useCampsites();
 
   if (!location || !campsites) return null;
@@ -37,10 +43,16 @@ export default function AddCampsiteForm({ location, onClose, refetch }: Props) {
       drinkableWater: false,
       note: "",
       toilet: false,
-    }
+    },
   });
 
   async function pickImage() {
+    const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    if (status !== "granted") {
+      alert(language.map.permission.mediaLibraryPermissionAlert);
+      return;
+    }
+
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ["images"],
       allowsEditing: true,
@@ -53,6 +65,12 @@ export default function AddCampsiteForm({ location, onClose, refetch }: Props) {
   }
 
   async function takePhoto() {
+    const { status } = await ImagePicker.requestCameraPermissionsAsync();
+    if (status !== "granted") {
+      alert(language.map.permission.mediaLibraryPermissionAlert);
+      return;
+    }
+
     let result = await ImagePicker.launchCameraAsync({
       mediaTypes: ["images"],
       allowsEditing: true,
@@ -121,28 +139,36 @@ export default function AddCampsiteForm({ location, onClose, refetch }: Props) {
   return (
     <ScrollView>
       <View style={s.imagePicker}>
-        <Pressable onPress={pickImage} style={[s.imageContainer, { backgroundColor: theme.surface, borderColor: theme.primary }]}>
+        <Pressable
+          onPress={pickImage}
+          style={[
+            s.imageContainer,
+            { backgroundColor: theme.surface, borderColor: theme.primary },
+          ]}
+        >
           {!image && (
             <>
               <Text>{language.map.addCampsite.imageGallery}</Text>
               <Ionicons name="image-outline" color={theme.primary} size={24} />
             </>
           )}
-          {image && (
-            <Text>{language.map.addCampsite.imageExists}</Text>
-          )}
+          {image && <Text>{language.map.addCampsite.imageExists}</Text>}
         </Pressable>
 
-        <Pressable onPress={takePhoto} style={[s.imageContainer, { backgroundColor: theme.surface, borderColor: theme.primary }]}>
+        <Pressable
+          onPress={takePhoto}
+          style={[
+            s.imageContainer,
+            { backgroundColor: theme.surface, borderColor: theme.primary },
+          ]}
+        >
           {!image && (
             <>
               <Text>{language.map.addCampsite.imagePhoto}</Text>
               <Ionicons name="camera-outline" color={theme.primary} size={24} />
             </>
           )}
-          {image && (
-            <Text>{language.map.addCampsite.imageExists}</Text>
-          )}
+          {image && <Text>{language.map.addCampsite.imageExists}</Text>}
         </Pressable>
       </View>
 
@@ -152,13 +178,26 @@ export default function AddCampsiteForm({ location, onClose, refetch }: Props) {
         name="name"
         rules={{
           required: language.map.addCampsite.requiredName,
-          minLength: { value: 1, message: language.map.addCampsite.requiredNameMin },
-          maxLength: { value: 32, message: language.map.addCampsite.requiredNameMax },
+          minLength: {
+            value: 1,
+            message: language.map.addCampsite.requiredNameMin,
+          },
+          maxLength: {
+            value: 32,
+            message: language.map.addCampsite.requiredNameMax,
+          },
         }}
         render={({ field: { onChange, value }, fieldState: { error } }) => (
           <>
             <TextInput
-              style={[s.input, { backgroundColor: theme.surface, borderColor: theme.primary, color: theme.text }]}
+              style={[
+                s.input,
+                {
+                  backgroundColor: theme.surface,
+                  borderColor: theme.primary,
+                  color: theme.text,
+                },
+              ]}
               // placeholder={language.map.addCampsite.name}
               placeholderTextColor={theme.text + "88"}
               value={value}
@@ -175,12 +214,22 @@ export default function AddCampsiteForm({ location, onClose, refetch }: Props) {
         name="description"
         rules={{
           required: language.map.addCampsite.requiredDescription,
-          maxLength: { value: 64, message: language.map.addCampsite.requiredNameMax },
+          maxLength: {
+            value: 64,
+            message: language.map.addCampsite.requiredNameMax,
+          },
         }}
         render={({ field: { onChange, value }, fieldState: { error } }) => (
           <>
             <TextInput
-              style={[s.input, { backgroundColor: theme.surface, borderColor: theme.primary, color: theme.text }]}
+              style={[
+                s.input,
+                {
+                  backgroundColor: theme.surface,
+                  borderColor: theme.primary,
+                  color: theme.text,
+                },
+              ]}
               // placeholder={language.map.addCampsite.description}
               placeholderTextColor={theme.text + "88"}
               value={value}
@@ -295,7 +344,14 @@ export default function AddCampsiteForm({ location, onClose, refetch }: Props) {
         render={({ field: { onChange, value } }) => (
           <>
             <TextInput
-              style={[s.input, { backgroundColor: theme.surface, borderColor: theme.primary, color: theme.text }]}
+              style={[
+                s.input,
+                {
+                  backgroundColor: theme.surface,
+                  borderColor: theme.primary,
+                  color: theme.text,
+                },
+              ]}
               // placeholder={language.map.addCampsite.note}
               placeholderTextColor={theme.text + "88"}
               value={value}
@@ -313,11 +369,15 @@ export default function AddCampsiteForm({ location, onClose, refetch }: Props) {
 
         <Pressable onPress={onClose} style={s.button}>
           <Text>{language.map.close}</Text>
-          <Ionicons name="chevron-back-circle-outline" color={theme.primary} size={24} />
+          <Ionicons
+            name="chevron-back-circle-outline"
+            color={theme.primary}
+            size={24}
+          />
         </Pressable>
       </View>
     </ScrollView>
-  )
+  );
 }
 
 const s = StyleSheet.create({
@@ -366,4 +426,4 @@ const s = StyleSheet.create({
     alignItems: "center",
     gap: 5,
   },
-})
+});
