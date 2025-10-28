@@ -36,6 +36,12 @@ export const swedish = {
       requiredDescription: "Beskrivning krävs.",
       requiredDescriptionMax: "Beskrivningen får vara mex 64 tecken.",
     },
+    permission: {
+      cameraPermissionAlert:
+        "Appen behöver tillgång till kameran för att kunna ta bilder.",
+      mediaLibraryPermissionAlert:
+        "Appen behöver tillgång till dina bilder för att välja ett foto.",
+    },
   },
   places: {
     title: "Lägerplatser",
@@ -45,20 +51,22 @@ export const swedish = {
     water: "Badmöjligheter",
     drinkableWater: "Dricksvatten",
     toilet: "Toalett",
-    press: "Tryck för mer information..."
+    press: "Tryck för mer information...",
   },
   settings: {
     title: "Inställningar",
     theme: "Färgtema",
     chooseTheme: "Välj tema",
-    themeInstructions: "Tryck snabbt för att växla mellan ljust och mörkt färgtema, håll inne för att se fler alternativ.",
+    themeInstructions:
+      "Tryck snabbt för att växla mellan ljust och mörkt färgtema, håll inne för att se fler alternativ.",
     language: "Språk",
     chooseLanguage: "Välj språk",
     back: "Tillbaka",
   },
   about: {
     title: "Om appen",
-    description: "Lägerplatser.se är en ideell app för friluftsliv. Här kan du upptäcka nya lägerplatser, betygsätta dina favoritplatser och dela med andra.",
+    description:
+      "Lägerplatser.se är en ideell app för friluftsliv. Här kan du upptäcka nya lägerplatser, betygsätta dina favoritplatser och dela med andra.",
     featuresTitle: "Funktioner",
     features: [
       "Upptäck platser längs vandringsleder",
@@ -66,10 +74,11 @@ export const swedish = {
       "Sätt betyg och skriv omdömen",
     ],
     disclaimerTitle: "Ansvarsfriskrivning",
-    disclaimer: "Informationen i appen tillhandahålls av användare. Vi kan inte garantera att den alltid är korrekt eller uppdaterad. Du använder appen på egen risk. Visa hänsyn till naturen och följ lokala regler.",
+    disclaimer:
+      "Informationen i appen tillhandahålls av användare. Vi kan inte garantera att den alltid är korrekt eller uppdaterad. Du använder appen på egen risk. Visa hänsyn till naturen och följ lokala regler.",
     version: "Version",
     contactTitle: "Kontakt",
     contactEmail: "support@lagerplatser.se",
     contactWebsite: "www.lagerplatser.se",
   },
-}
+};

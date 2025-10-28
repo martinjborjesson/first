@@ -36,6 +36,12 @@ export const english = {
       requiredDescription: "Description is required",
       requiredDescriptionMax: "The description can be at most 64 characters.",
     },
+    permission: {
+      cameraPermissionAlert:
+        "The app requires camera access to be able to take pictures.",
+      mediaLibraryPermissionAlert:
+        "The app requires storage access to be able to view and save images.",
+    },
   },
   places: {
     title: "Campsites",
@@ -45,20 +51,22 @@ export const english = {
     water: "Swimming",
     drinkableWater: "Drinkable water",
     toilet: "Toilet",
-    press: "Tap for more details..."
+    press: "Tap for more details...",
   },
   settings: {
     title: "Settings",
     theme: "Color scheme",
     chooseTheme: "Choose color scheme",
-    themeInstructions: "Tap to switch between light and dark color scheme, long press for more options.",
+    themeInstructions:
+      "Tap to switch between light and dark color scheme, long press for more options.",
     language: "Language",
     chooseLanguage: "Choose language",
     back: "Back",
   },
   about: {
     title: "About the app",
-    description: "Lägerplatser.se is a non-profit app for outdoor life. Here you can discover new campsites, rate your favorites, and share with others.",
+    description:
+      "Lägerplatser.se is a non-profit app for outdoor life. Here you can discover new campsites, rate your favorites, and share with others.",
     featuresTitle: "Features",
     features: [
       "Discover places along hiking trails",
@@ -66,10 +74,11 @@ export const english = {
       "Rate and write reviews",
     ],
     disclaimerTitle: "Disclaimer",
-    disclaimer: "The information in the app is provided by users. We cannot guarantee that it is always accurate or up to date. You use the app at your own risk. Always respect nature and follow local regulations.",
+    disclaimer:
+      "The information in the app is provided by users. We cannot guarantee that it is always accurate or up to date. You use the app at your own risk. Always respect nature and follow local regulations.",
     version: "Version",
     contactTitle: "Contact",
     contactEmail: "support@lagerplatser.se",
     contactWebsite: "www.lagerplatser.se",
   },
-}
+};
