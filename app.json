@@ -31,7 +31,8 @@
         "CAMERA",
         "READ_EXTERNAL_STORAGE",
         "WRITE_EXTERNAL_STORAGE"
-      ]
+      ],
+      "package": "com.mjborjesson.lagerplatser"
     },
     "web": {
       "output": "static",
@@ -56,6 +57,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "2990b401-38af-4b74-85af-b0db14813528"
+      }
     }
   }
 }
