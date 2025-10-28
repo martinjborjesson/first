@@ -11,7 +11,10 @@
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
-        "NSLocationAlwaysAndWhenInUseUsageDescription": "Appen använder din plats för att visa din nuvarande position på kartan."
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Appen använder din plats för att visa din nuvarande position på kartan.",
+        "NSCameraUsageDescription": "Appen behöver tillgång till kameran för att ta bilder till lägerplatser.",
+        "NSPhotoLibraryUsageDescription": "Appen behöver tillgång till dina bilder för att du ska kunna välja och ladda upp foton.",
+        "NSPhotoLibraryAddUsageDescription": "Appen behöver kunna spara bilder som du tar."
       }
     },
     "android": {
@@ -23,7 +26,12 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "permissions": ["ACCESS_FINE_LOCATION"]
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
     },
     "web": {
       "output": "static",
