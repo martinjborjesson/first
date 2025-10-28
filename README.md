@@ -63,4 +63,4 @@ Om extern enhet andänds är det viktigt att servern och enheten är på samma l
     - `React Native Maps`
     - `React Hook Form`
 - [X] Appen ska prata med ett Web-API för att hämta data.
-- [ ] Appen ska förberedas för lansering till en Appstore (Deadline samma dag som kursen slutar)
+- [X] Appen ska förberedas för lansering till en Appstore (Deadline samma dag som kursen slutar)
