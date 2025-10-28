@@ -53,6 +53,9 @@ Ladda ner Lägerplatser.se idag och bidra till kartan över Sveriges bästa läg
     <img src="./assets/images/screens/image-2-map.jpg" width="200" alt="Fönsterbild 2 Telefon">
     <img src="./assets/images/screens/image-3-places.jpg" width="200" alt="Fönsterbild 3 Telefon">
 </figure>
+<figure>
+    <img src="./aab/Screenshot 2025-10-28 185350.png" alt="Hoppas det var detta du ville ha skärmdump på.">
+</figure>
 
 ---
 
@@ -70,7 +73,7 @@ Två till åtta fönsterbilder i formatet 16:9 eller 9:16 samt bredd och höjd m
 ![Fönsterbild 2 Telefon](./assets/images/screens/image-2-map.jpg);
 ![Fönsterbild 3 Telefon](./assets/images/screens/image-3-places.jpg);
 
-[Binärfilen](./path/to/build.aab);
+[Binärfilen](./aab/application-7f081c03-d9cc-4b44-8166-27dfe7f64dfd.aab);
 
-![Screenshot på expo bygget](./path/to/build.aab);
+![Screenshot på expo bygget](./aab/Screenshot%202025-10-28%20185350.png);
 Tänk på att bilden måste visa både "Created By" och "Start Time".
